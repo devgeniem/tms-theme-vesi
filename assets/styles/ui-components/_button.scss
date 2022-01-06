@@ -1,0 +1,56 @@
+// stylelint-disable declaration-no-important
+
+$button-primary-border-color: #668ec9;
+$button-secondary-border-color: #f1eeeb;
+
+.button {
+    border-radius: 17rem !important;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 .125rem .375rem rgba(0, 0, 0, .15);
+    }
+
+    &.is-primary {
+        border-color: $button-primary-border-color !important;
+        background-color: $white;
+        color: #0b2237;
+
+        .icon {
+            fill: $button-primary-border-color !important;
+        }
+
+        &:hover,
+        &.is-hovered {
+            border-color: #a3cdef !important;
+            background-color: #00417d !important;
+            color: $white;
+
+            .icon {
+                fill: #a3cdef !important;
+            }
+        }
+
+        &:focus,
+        &.is-focused {
+            border-color: #a3cdef !important;
+            outline: .125rem dotted #00417d !important;
+            outline-offset: .25rem !important;
+            background-color: #00417d !important;
+            color: $white;
+        }
+
+        &:active,
+        &.is-active {
+            border-color: #a3cdef !important;
+            outline: none !important;
+            background-color: #00417d !important;
+            box-shadow: none;
+            color: $white !important;
+
+            .icon {
+                fill: #a3cdef !important;
+            }
+        }
+    }
+}
