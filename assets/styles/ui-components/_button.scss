@@ -5,6 +5,7 @@ $button-secondary-border-color: #f1eeeb;
 
 .button {
     border-radius: 17rem !important;
+    font-family: $family-tertiary;
 
     &:hover,
     &:focus {
