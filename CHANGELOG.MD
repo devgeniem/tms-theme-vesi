@@ -9,5 +9,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- TMS-548: Sibling navigation
 - TMS-550: Footer
 - TMS-546: Add theme fonts

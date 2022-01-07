@@ -1,0 +1,24 @@
+// stylelint-disable declaration-no-important
+
+.sibling-navigation {
+    &__container {
+        border-top: .12rem dashed $accent;
+    }
+
+    &__items {
+        justify-content: center;
+    }
+
+    &__item {
+        border-width: .12rem !important;
+        font-family: $family-tertiary !important;
+        font-size: .83333rem !important;
+        font-weight: 400 !important;
+
+        &.is-current {
+            &:focus {
+                outline-color: $primary;
+            }
+        }
+    }
+}
