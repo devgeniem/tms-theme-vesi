@@ -6,3 +6,4 @@
 import '../../../tms-theme-base/assets/scripts/main.js';
 import '../fonts';
 import '../styles/theme-vesi.scss';
+import '../images';

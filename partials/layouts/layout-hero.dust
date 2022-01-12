@@ -1,0 +1,49 @@
+<section {?anchor}id="{anchor|s}"{/anchor}
+         class="hero is-relative has-background-cover {container_class|s}" {@inlinebg id=image size="fullhd" /}>
+
+    {?image}
+        <div class="image is-4by3 is-hidden-desktop">
+            {@image id=image size="large" class="hero__image" /}
+        </div>
+    {/image}
+
+    {?video}
+        <div class="hero__video-container" aria-hidden="true" tabindex="-1">
+            <video src="{video}" class="hero__video is-hidden" loop muted playsinline></video>
+
+            {?video}
+                <div class="hero__controls" aria-hidden="true" tabindex="-1">
+                    <button class="hero__control hero__control--play" aria-label="{Strings.s.video.play|s}">
+                        {>"ui/icon" icon="play" class="icon--large"  /}
+                    </button>
+
+                    <button class="hero__control hero__control--pause" aria-label="{Strings.s.video.pause|s}">
+                        {>"ui/icon" icon="pause" class="icon--large"  /}
+                    </button>
+                </div>
+            {/video}
+        </div>
+    {/video}
+
+    {?has_filled_fields}
+        <div class="hero__inner">
+            <div class="container">
+                <div class="columns is-variable is-1">
+                    <div class="column {column_class|s}">
+                        <div class="hero__content is-relative">
+                            {?title}
+                                <h1 class="hero__title">
+                                    {title|s}
+                                </h1>
+                            {/title}
+
+                            {description|s}
+
+                            {>"ui/button-link" link=link classes="is-secondary" icon="arrow-right" icon_classes="icon--medium" /}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {/has_filled_fields}
+</section>

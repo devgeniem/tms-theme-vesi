@@ -5,12 +5,10 @@
 
 namespace TMS\Theme\Vesi;
 
-use WP_post;
-
 /**
  * Class ThemeCustomizationController
  *
- * @package TMS\Theme\Base
+ * @package TMS\Theme\Vesi
  */
 class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Controller {
 
@@ -32,7 +30,6 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         echo '
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700;800&family=Secular+One&display=swap" rel="stylesheet">
-        ';
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700;800&family=Secular+One&display=swap" rel="stylesheet">'; // phpcs:ignore
     }
 }
