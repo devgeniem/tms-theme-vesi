@@ -55,6 +55,17 @@ $secondary-navbar-item-font-weight: 400;
 
 $lang-nav-link-border: $accent-light;
 
+// fly-out-nav
+$fly-out-nav-trigger-icon: $color-blackish;
+$fly-out-nav-trigger-icon-hover: $primary;
+$fly-out-nav-primary-link: $color-blackish;
+$fly-out-nav-primary-link-hover: $primary;
+$fly-out-nav-primary-dropdown-active-background: transparent;
+$fly-out-nav-secondary-border-color: transparent;
+$fly-out-nav-secondary-link: $primary;
+$fly-out-nav-secondary-link-hover: $color-blackish;
+$fly-out-nav-search-button-icon: $primary !default;
+
 // ui-components: Sibling navigation
 $sibling-navigation-item-active-background-color: $primary;
 $sibling-navigation-item-border-color: $accent-light;
