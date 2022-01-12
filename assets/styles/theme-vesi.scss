@@ -19,6 +19,8 @@ $secondary-light-invert: $primary-light-invert;
 $secondary-dark: $primary-dark;
 $secondary-dark-invert: $primary-dark-invert;
 
+$accent: #a3cdef;
+
 $light: #f1eeeb;
 $light-invert: $black;
 $dark: $primary-dark;
@@ -40,6 +42,13 @@ $button-colors: ();
 
 $color-background-primary-light--opaque-light: $secondary;
 $button-border-radius: 0;
+
+// ui-components: Sibling navigation
+$sibling-navigation-item-active-background-color: $primary;
+$sibling-navigation-item-border-color: $accent;
+$sibling-navigation-item-active-border-color: $accent;
+$sibling-navigation-item-color: $black;
+$sibling-navigation-item-active-color: $white;
 
 @import "../../../tms-theme-base/assets/styles/main";
 @import "main";
