@@ -19,8 +19,6 @@ $secondary-light-invert: $primary-light-invert;
 $secondary-dark: $primary-dark;
 $secondary-dark-invert: $primary-dark-invert;
 
-$accent: #a3cdef;
-
 $light: #f1eeeb;
 $light-invert: $black;
 $dark: $primary-dark;
@@ -43,10 +41,35 @@ $button-colors: ();
 $color-background-primary-light--opaque-light: $secondary;
 $button-border-radius: 0;
 
+// ui-components/header/primary-nav
+$navbar-item-navbar-link-color: $primary-invert;
+$navbar-item-grid-item-border-color: $accent-light;
+$navbar-item-has-dropdown-active: $white;
+$navbar-item-dropdown-accent-color: $white;
+$navbar-item-navbar-active-bg-color: rgba($navbar-item-navbar-link-color, .05);
+
+// ui-components/header/secondary-nav
+$secondary-navbar-item-navbar-link-color: $primary;
+$secondary-navbar-item-navbar-link-color-hover: $primary;
+$secondary-navbar-item-font-weight: 400;
+
+$lang-nav-link-border: $accent-light;
+
+// fly-out-nav
+$fly-out-nav-trigger-icon: $color-blackish;
+$fly-out-nav-trigger-icon-hover: $primary;
+$fly-out-nav-primary-link: $color-blackish;
+$fly-out-nav-primary-link-hover: $primary;
+$fly-out-nav-primary-dropdown-active-background: transparent;
+$fly-out-nav-secondary-border-color: transparent;
+$fly-out-nav-secondary-link: $primary;
+$fly-out-nav-secondary-link-hover: $color-blackish;
+$fly-out-nav-search-button-icon: $primary !default;
+
 // ui-components: Sibling navigation
 $sibling-navigation-item-active-background-color: $primary;
-$sibling-navigation-item-border-color: $accent;
-$sibling-navigation-item-active-border-color: $accent;
+$sibling-navigation-item-border-color: $accent-light;
+$sibling-navigation-item-active-border-color: $accent-light;
 $sibling-navigation-item-color: $black;
 $sibling-navigation-item-active-color: $white;
 

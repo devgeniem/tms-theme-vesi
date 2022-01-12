@@ -1,0 +1,11 @@
+/*!
+ *  Copyright (c) 2021. Geniem Oy
+ */
+
+.menu-item-secondary {
+    text-transform: none !important; // stylelint-disable declaration-no-important
+
+    &__link {
+        font-family: $family-tertiary;
+    }
+}
