@@ -6,20 +6,17 @@
 @import "functions";
 
 $base-sizes: (
-    "mobile": ("base_size": 16px, "scale_value": 1.135, "break_point": 0),
-    "tablet": ("base_size": 17px, "scale_value": 1.145, "break_point": $tablet),
-    "desktop": ("base_size": 17px, "scale_value": 1.165, "break_point": $desktop)
+    "mobile": ("base_size": 17px, "scale_value": 1.2, "break_point": 0),
+    "tablet": ("base_size": 17px, "scale_value": 1.2, "break_point": $tablet),
+    "desktop": ("base_size": 18px, "scale_value": 1.2, "break_point": $desktop)
 ) !default;
 
-$family-sans-serif: "Bodoni Egyptian Pro", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-primary: "Inter", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-secondary: "Inter", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-tertiary: 'Secular One', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
-$family-primary: "Gotham Pro", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$family-secondary: $family-sans-serif;
-
-$font-family-header: $family-secondary;
+$font-family-header: $family-primary;
 $font-family-text: $family-primary;
-
-$family-tove-sans: "ToveScript", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
 $sizes-desktop: map-get($base-sizes, "desktop");
 $sizes-desktop-base_size: map-get($sizes-desktop, "base_size");
@@ -50,13 +47,13 @@ html {
 @mixin breakpoint_typography($base, $calculated_sizes) {
     body {
         font-size: $base;
-        line-height: 1.76;
+        line-height: 1.77;
+        font-weight: 300;
     }
 
     .has-text-lead {
         font-size: map-get($calculated_sizes, "h6") !important;
-        line-height: 1.62;
-        font-family: $family-sans-serif;
+        line-height: 2;
         font-weight: 600;
     }
 
@@ -76,7 +73,7 @@ html {
     .h1 {
         font-size: map-get($calculated_sizes, "h1") !important;
         font-family: $font-family-header;
-        font-weight: 800;
+        font-weight: 700;
         line-height: 1.22;
         hyphens: auto;
     }
@@ -85,7 +82,7 @@ html {
     .h2 {
         font-size: map-get($calculated_sizes, "h2") !important;
         font-family: $font-family-header;
-        font-weight: 800;
+        font-weight: 700;
         line-height: 1.2;
         hyphens: auto;
     }
@@ -94,7 +91,7 @@ html {
     .h3 {
         font-size: map-get($calculated_sizes, "h3") !important;
         font-family: $font-family-header;
-        font-weight: 800;
+        font-weight: 700;
         line-height: 1.22;
         hyphens: auto;
     }
@@ -103,7 +100,7 @@ html {
     .h4 {
         font-size: map-get($calculated_sizes, "h4") !important;
         font-family: $font-family-header;
-        font-weight: 800;
+        font-weight: 700;
         line-height: 1.22;
         hyphens: auto;
     }
@@ -112,7 +109,7 @@ html {
     .h5 {
         font-size: map-get($calculated_sizes, "h5") !important;
         font-family: $font-family-header;
-        font-weight: $weight-semibold;
+        font-weight: 700;
         line-height: 1.22;
         hyphens: auto;
     }
@@ -121,7 +118,7 @@ html {
     .h6 {
         font-size: map-get($calculated_sizes, "h6") !important;
         font-family: $font-family-header;
-        font-weight: $weight-semibold;
+        font-weight: 800;
         line-height: 1.22;
         hyphens: auto;
     }
@@ -163,4 +160,13 @@ a {
             @include breakpoint_typography($calc-base_size, $calculated_sizes);
         }
     }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #0b2237;
 }

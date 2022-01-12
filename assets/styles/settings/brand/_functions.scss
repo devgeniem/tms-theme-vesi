@@ -8,7 +8,7 @@
 }
 
 @function get_calculated_sizes($base_size: 17px, $scale_value: 1.165, $as_list: false) {
-    $size-h6: $base_size * $scale_value;
+    $size-h6: $base_size;
     $size-h5: $size-h6 * $scale_value;
     $size-h4: $size-h5 * $scale_value;
     $size-h3: $size-h4 * $scale_value;

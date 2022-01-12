@@ -19,5 +19,20 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
      *
      * @return void
      */
-    public function hooks() : void { }
+    public function hooks() : void {
+        add_action( 'wp_head', [ $this, 'append_font_links' ] );
+    }
+
+    /**
+     * Append font links
+     *
+     * @return void
+     */
+    public function append_font_links() : void {
+        echo '
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700;800&family=Secular+One&display=swap" rel="stylesheet">
+        ';
+    }
 }
