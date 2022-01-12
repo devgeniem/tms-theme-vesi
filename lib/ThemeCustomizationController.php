@@ -5,12 +5,10 @@
 
 namespace TMS\Theme\Vesi;
 
-use WP_post;
-
 /**
  * Class ThemeCustomizationController
  *
- * @package TMS\Theme\Base
+ * @package TMS\Theme\Vesi
  */
 class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Controller {
 

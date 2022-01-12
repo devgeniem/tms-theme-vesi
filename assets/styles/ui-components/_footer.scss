@@ -4,6 +4,7 @@
 
 .site-footer {
     position: relative;
+    overflow: hidden;
 
     &::after {
         content: "";
