@@ -2,11 +2,6 @@
  *  Copyright (c) 2021. Geniem Oy
  */
 
-$navbar-item-navbar-link-color: $primary-invert;
-$navbar-item-grid-item-border-color: $white;
-$navbar-item-has-dropdown-active: $white;
-$navbar-item-dropdown-accent-color: $white;
-$navbar-item-navbar-active-bg-color: rgba($navbar-item-navbar-link-color, .05);
 
 .site-header {
     &__nav {
@@ -15,7 +10,7 @@ $navbar-item-navbar-active-bg-color: rgba($navbar-item-navbar-link-color, .05);
 }
 
 .primary-nav {
-    font-family: $family-secondary;
+    font-family: $family-tertiary;
 
     .navbar-item {
         .navbar-dropdown-control {
@@ -23,6 +18,7 @@ $navbar-item-navbar-active-bg-color: rgba($navbar-item-navbar-link-color, .05);
             }
 
             .icon {
+                fill: $accent-light;
             }
         }
 
@@ -48,6 +44,9 @@ $navbar-item-navbar-active-bg-color: rgba($navbar-item-navbar-link-color, .05);
     > .navbar-item,
     > .has-dropdown > div > .navbar-link {
         color: $white;
+        font-family: $family-tertiary !important;
+        font-weight: 400;
+        text-transform: none;
 
         &:hover,
         &:focus {
@@ -72,20 +71,33 @@ $navbar-item-navbar-active-bg-color: rgba($navbar-item-navbar-link-color, .05);
         }
 
         .navbar-dropdown {
+            background-color: $color-vesi-white;
+
             &__parent-link {
+                display: none !important;
             }
 
             .icon {
+                fill: $accent-light;
             }
         }
 
         .navbar-grid {
+            font-family: $family-primary;
+
             .navbar-item {
+                color: $color-blackish;
+                font-weight: 300 !important;
+                border-color: $accent-light;
+
                 &:hover,
                 &:focus {
+                    color: $primary;
+                    text-decoration: underline !important;
                 }
 
                 &.current-menu-item {
+                    color: $color-blackish;
                 }
             }
         }
