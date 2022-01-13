@@ -31,19 +31,33 @@
                     font-family: $family-tertiary;
                     font-weight: 400;
                 }
+
+                .icon {
+                    fill: $accent !important;
+                }
+
+                > .dropdown-toggler {
+                    &:focus {
+                        outline-color: $fly-out-nav-primary-link;
+                    }
+                }
             }
 
             .navbar-item {
-                padding-right: 0;
-                padding-left: 0;
+                padding: .75rem 0;
                 border-bottom: .12rem solid $accent-light;
                 font-family: $family-primary;
                 font-size: 1rem;
                 font-weight: 300;
+
+                > .icon {
+                    fill: $accent !important;
+                }
             }
         }
 
         .navbar-dropdown {
+            padding-top: 1.5rem;
             padding-right: 1.5rem;
             padding-left: 1.5rem;
         }
