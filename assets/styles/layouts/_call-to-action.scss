@@ -1,0 +1,37 @@
+/*!
+ *  Copyright (c) 2021. Geniem Oy
+ */
+
+.call-to-action {
+    &__theme-dark {
+        background-color: $primary;
+        color: $primary-invert;
+
+        .call-to-action__title {
+            color: $primary-invert;
+        }
+    }
+
+    &__theme-light {
+        background-color: $color-vesi-white;
+        color: $color-blackish;
+
+        .call-to-action__title {
+            color: $color-blackish;
+        }
+    }
+
+    &__inner {
+        padding: 2rem 2rem 2rem;
+
+        @include from($desktop) {
+            padding: 4rem 4rem 4rem;
+        }
+    }
+
+    &__image-container {
+        @include from($desktop) {
+            min-height: 25.5555555rem;
+        }
+    }
+}
