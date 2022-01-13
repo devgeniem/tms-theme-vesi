@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- TMS-595: Call to Action layout
 - TMS-549: Breadcrumbs
 - TMS-548: Sibling navigation #10
 - TMS-621: 404 page #9

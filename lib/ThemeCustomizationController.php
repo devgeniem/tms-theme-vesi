@@ -41,7 +41,7 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
     /**
      * Alter breadcrumbs
      *
-     * @param array $breadcrumbs Breadcrumbs
+     * @param array $breadcrumbs Breadcrumbs.
      *
      * @return array
      */
