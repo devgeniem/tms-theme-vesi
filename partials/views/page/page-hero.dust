@@ -1,5 +1,5 @@
 <section class="page__hero section is-relative pt-0 pb-0 has-background-cover" {@inlinebg id=Page.hero_image size="fullhd" /}>
-    <div class="container is-absolute has-top-50 has-right-0 has-left-0 has-transform-y--50">
+    <div class="container is-absolute has-top-50 has-right-0 has-left-0 has-transform-y--50 pr-5 pl-5">
         <div class="columns is-vcentered has-text-centered">
             <div class="column is-6-desktop is-offset-3-desktop has-height-100">
                 {>"ui/entry-title" class="m-0 is-inline-block" /}
