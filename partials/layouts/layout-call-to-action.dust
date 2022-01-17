@@ -13,9 +13,7 @@
                                         {@image id=image.id size="large" class="objectfit-image" /}
                                     </div>
 
-                                    <div class="call-to-action__image is-hidden-touch has-background-cover is-overlay" {@inlinebg id=image.id size="large" /}>
-
-                                    </div>
+                                    <div class="call-to-action__image is-hidden-touch has-background-cover is-overlay" {@inlinebg id=image.id size="large" /}></div>
 
                                     {?display_artist}
                                         {?image_author_and_artist}
