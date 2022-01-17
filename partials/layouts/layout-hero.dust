@@ -14,11 +14,11 @@
             {?video}
                 <div class="hero__controls" aria-hidden="true" tabindex="-1">
                     <button class="hero__control hero__control--play" aria-label="{Strings.s.video.play|s}">
-                        {>"ui/icon" icon="play" class="icon--large"  /}
+                        {>"ui/icon" icon="play" class="icon--xlarge"  /}
                     </button>
 
                     <button class="hero__control hero__control--pause" aria-label="{Strings.s.video.pause|s}">
-                        {>"ui/icon" icon="pause" class="icon--large"  /}
+                        {>"ui/icon" icon="pause" class="icon--xlarge"  /}
                     </button>
                 </div>
             {/video}
