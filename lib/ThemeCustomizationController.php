@@ -23,6 +23,7 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         add_filter( 'tms/base/breadcrumbs/after_prepare', [ $this, 'alter_breadcrumbs' ] );
         add_filter( 'tms/theme/error404/search_link', [ $this, 'error404_search_link' ] );
         add_filter( 'tms/theme/error404/home_link', [ $this, 'error404_home_link' ] );
+        add_filter( 'tms/theme/error404/alignment', [ $this, 'error404_alignment' ] );
         add_filter( 'tms/acf/tab/error404/fields', [ $this, 'remove_404_alignment_setting' ] );
     }
 
@@ -84,6 +85,19 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         $link['class']   = 'icon--medium';
 
         return $link;
+    }
+
+    /**
+     * 404 text alignment
+     *
+     * @param string $alignment Alignment class.
+     *
+     * @return string
+     */
+    public function error404_alignment( string $alignment ) : string {
+        $alignment = 'has-text-centered';
+
+        return $alignment;
     }
 
     /**
