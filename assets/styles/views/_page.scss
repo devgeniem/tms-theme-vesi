@@ -1,0 +1,23 @@
+/*!
+ *  Copyright (c) 2021. Geniem Oy
+ */
+
+.page {
+    &__hero {
+        h1 {
+            padding: .5rem;
+            background-color: rgba($primary, .65);
+            color: $white;
+
+            @include from($desktop) {
+                font-size: 3.555rem !important;
+            }
+        }
+    }
+
+    .entry {
+        &__content {
+            margin-top: 4rem;
+        }
+    }
+}
