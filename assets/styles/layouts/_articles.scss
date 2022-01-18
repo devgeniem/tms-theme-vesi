@@ -1,0 +1,26 @@
+.layout-articles {
+    @include from(1630px) {
+        background-image: url(../images/frame-1.png);
+        background-repeat: no-repeat;
+        background-position: 99% 0;
+    }
+
+    @include from(1680px) {
+        background-position: 98% 10%;
+    }
+
+    .entry {
+        &__title {
+            > a {
+                color: $color-blackish;
+            }
+        }
+
+        &__excerpt {
+            > span {
+                font-weight: 800 !important;
+            }
+
+        }
+    }
+}

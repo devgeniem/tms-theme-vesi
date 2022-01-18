@@ -1,0 +1,16 @@
+/*!
+ *  Copyright (c) 2022. Geniem Oy
+ */
+
+.pill {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-weight: 300;
+
+    &:not(span) {
+        &:focus {
+            outline-color: $primary;
+            color: $primary-invert;
+        }
+    }
+}

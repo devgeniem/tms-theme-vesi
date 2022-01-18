@@ -79,5 +79,20 @@ $tms-breadcrumb-item-color-hover: $color-blackish;
 $tms-breadcrumb-item-color-active: $color-blackish;
 $tms-breadcrumb-item-color-separator: $accent-light;
 
+// pill
+$pill-background-color: $white;
+$pill-color: $primary;
+$pill-color-active: $primary-invert;
+$pill-color-active-hover: $primary-invert;
+$pill-color-hover: $primary-invert;
+$pill-background-active: $primary;
+$pill-background-active-focus: $primary;
+$pill-background-color-hover: $primary;
+$pill-background-color-focus: $primary;
+$pill-background-color-active: $primary;
+$pill-background-color-focus: $primary;
+$pill-border-color: $accent-mid;
+$pill-border-radius: 5.88rem;
+
 @import "../../../tms-theme-base/assets/styles/main";
 @import "main";
