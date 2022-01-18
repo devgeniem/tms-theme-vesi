@@ -1,0 +1,30 @@
+{! asdfasdf !}
+<div class="fault-map is-align-wide mt-6 mb-6">
+    {?title}
+        <h2 class="fault-map__title mt-0 mb-6">
+            {title|s}
+        </h2>
+    {/title}
+
+    <div class="fault-map__info is-flex is-align-items-center mt-6 mb-6">
+        {?description}
+            <div class="fault-map__description keep-vertical-spacing">
+                {description|s}
+            </div>
+        {/description}
+
+        {?button_text}
+            <div class="is-flex-shrink-0 ml-auto pl-6">
+                <a href="https://trevesi.tampere.fi/hairiokartta/" class="button button--icon is-primary">
+                    {button_text|s}
+
+                    {>"ui/icon" icon="arrow-right" class="icon--medium ml-1" /}
+                </a>
+            </div>
+        {/button_text}
+    </div>
+
+    <div class="mt-6 image is-16by9 is-embed-container">
+        <iframe src="https://trevesi.tampere.fi/hairiokartta/"></iframe>
+    </div>
+</div>
