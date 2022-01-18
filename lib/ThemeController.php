@@ -18,12 +18,13 @@ class ThemeController extends \TMS\Theme\Base\ThemeController {
      */
     protected function init_classes() : void {
         $classes = [
-            Assets::class,
             ACFController::class,
+            Assets::class,
+            BlocksController::class,
+            FormatterController::class,
+            Localization::class,
             PostTypeController::class,
             TaxonomyController::class,
-            Localization::class,
-            FormatterController::class,
             ThemeCustomizationController::class,
         ];
 

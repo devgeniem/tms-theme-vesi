@@ -5,6 +5,9 @@
 
 namespace TMS\Theme\Vesi;
 
+use TMS\Theme\Base\PostType\Page;
+use TMS\Theme\Base\PostType\Post;
+
 /**
  * Class ThemeCustomizationController
  *
@@ -20,11 +23,30 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
     public function hooks() : void {
         add_action( 'wp_head', [ $this, 'append_font_links' ] );
 
+        add_filter( 'tms/gutenberg/blocks', [ $this, 'alter_blocks' ] );
         add_filter( 'tms/base/breadcrumbs/after_prepare', [ $this, 'alter_breadcrumbs' ] );
         add_filter( 'tms/theme/error404/search_link', [ $this, 'error404_search_link' ] );
         add_filter( 'tms/theme/error404/home_link', [ $this, 'error404_home_link' ] );
         add_filter( 'tms/theme/error404/alignment', [ $this, 'error404_alignment' ] );
         add_filter( 'tms/acf/tab/error404/fields', [ $this, 'remove_404_alignment_setting' ] );
+    }
+
+    /**
+     * Alter theme blocks
+     *
+     * @param array $blocks Theme blocks.
+     *
+     * @return array
+     */
+    public function alter_blocks( $blocks ) {
+        $blocks['acf/fault-map'] = [
+            'post_types' => [
+                Post::SLUG,
+                Page::SLUG,
+            ],
+        ];
+
+        return $blocks;
     }
 
     /**
