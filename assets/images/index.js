@@ -3,3 +3,4 @@
  */
 
 import './drop.png';
+import './frame-1.png';
