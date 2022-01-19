@@ -6,7 +6,7 @@
         </h2>
     {/title}
 
-    <div class="fault-map__info is-flex is-align-items-center mt-6 mb-6">
+    <div class="fault-map__info mt-6 mb-6">
         {?description}
             <div class="fault-map__description keep-vertical-spacing">
                 {description|s}
@@ -14,7 +14,7 @@
         {/description}
 
         {?button_text}
-            <div class="is-flex-shrink-0 ml-auto pl-6">
+            <div class="fault-map__link-container">
                 <a href="https://trevesi.tampere.fi/hairiokartta/" class="button button--icon is-primary">
                     {button_text|s}
 
@@ -24,7 +24,7 @@
         {/button_text}
     </div>
 
-    <div class="mt-6 image is-16by9 is-embed-container">
+    <div class="mt-6 image is-4by3 is-embed-container">
         <iframe src="https://trevesi.tampere.fi/hairiokartta/"></iframe>
     </div>
 </div>
