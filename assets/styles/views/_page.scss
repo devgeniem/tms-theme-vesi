@@ -6,7 +6,7 @@
     &__hero {
         h1 {
             padding: .5rem;
-            background-color: rgba($primary, .65);
+            background-color: rgba($primary, .75);
             color: $white;
 
             @include from($desktop) {
