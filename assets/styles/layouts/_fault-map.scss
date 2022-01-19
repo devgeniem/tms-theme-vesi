@@ -1,0 +1,24 @@
+/*!
+ *  Copyright (c) 2021. Geniem Oy
+ */
+
+.fault-map {
+    &__info {
+        @include from($tablet) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__link-container {
+        margin-top: 1rem;
+
+        @include from($tablet) {
+            flex-shrink: 0;
+            margin-top: 0;
+            margin-right: auto;
+            margin-left: 1.5rem;
+            padding-left: 1.5rem;
+        }
+    }
+}
