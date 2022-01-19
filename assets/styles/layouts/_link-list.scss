@@ -1,0 +1,21 @@
+.link-list {
+    background-color: $color-accent !important;
+    color: $white !important;
+
+    &__title {
+        color: $white;
+    }
+
+    a {
+        color: $white !important;
+        font-weight: 600;
+
+        > .icon {
+            fill: $white !important;
+
+            &:first-child {
+                fill: $accent-light !important;
+            }
+        }
+    }
+}
