@@ -1,0 +1,44 @@
+// stylelint-disable declaration-no-important
+
+.grid {
+    &__item {
+        color: $color-blackish !important;
+
+        h3 {
+            @extend .h3;
+
+            color: $color-blackish !important;
+        }
+
+        &:nth-child(3n+1) {
+            background-color: $primary !important;
+            color: $primary-invert !important;
+
+            h3 {
+                color: $primary-invert !important;
+            }
+        }
+
+        &:nth-child(3n) {
+            background-color: $accent-mid !important;
+        }
+
+        &:nth-child(3n+2) {
+            background-color: $color-highlight !important;
+        }
+
+        &--featured {
+            .overlay {
+                background: linear-gradient(0deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),;
+            }
+
+            .grid__item__details {
+                .button {
+                    > .icon {
+                        fill: $accent-light !important;
+                    }
+                }
+            }
+        }
+    }
+}

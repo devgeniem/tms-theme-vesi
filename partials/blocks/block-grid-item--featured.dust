@@ -1,0 +1,27 @@
+<div class="grid__item gallery gallery--gap0 gallery-columns-1 is-align-items-stretch grid__item--featured is-relative {classes}">
+    <div class="grid__item__image is-order-1 image is-square is-clipped">
+        {?image.id}
+            {@image id=image.id size="large" class="objectfit-image" /}
+        {/image.id}
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="grid__item__details is-order-0 has-text-left is-absolute has-bottom-0 pb-7 pr-6 pl-6 has-text-white">
+        {?title}
+            <h3 class="mb-0">{title}</h3>
+        {/title}
+
+        {?description}
+            <p class="has-text-small mt-3 mb-0 mt-5-tablet">{description|s}</p>
+        {/description}
+
+        {?link}
+            <a href="{link.url}" target="{link.target}" class="button button--icon is-small has-width-fit-content is-primary ml-0 mt-4 mt-5-tablet">
+                {link.title}
+
+                {>"ui/icon" icon="arrow-right" class="is-inline-block icon--medium" /}
+            </a>
+        {/link}
+    </div>
+</div>
