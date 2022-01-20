@@ -1,0 +1,36 @@
+/*!
+ *  Copyright (c) 2021. Geniem Oy
+ */
+
+.breadcrumbs-container {
+    padding-top: 1.4rem !important;
+    padding-bottom: 1.4rem !important;
+    background-color: $color-vesi-white;
+}
+
+.breadcrumb {
+    .breadcrumbs {
+        &__nav {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.2;
+
+            a {
+                padding-left: 0 !important;
+            }
+
+            li + li {
+                &::before {
+                    content: "";
+                    display: none !important;
+                }
+            }
+        }
+    }
+
+    &__separator {
+        margin-right: 0 !important;
+        margin-left: .75rem !important;
+        fill: $accent-light;
+    }
+}

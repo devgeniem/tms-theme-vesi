@@ -73,5 +73,11 @@ $sibling-navigation-item-active-border-color: $accent-light;
 $sibling-navigation-item-color: $black;
 $sibling-navigation-item-active-color: $white;
 
+// breadcrumbs
+$tms-breadcrumb-item-color-link: $primary;
+$tms-breadcrumb-item-color-hover: $color-blackish;
+$tms-breadcrumb-item-color-active: $color-blackish;
+$tms-breadcrumb-item-color-separator: $accent-light;
+
 @import "../../../tms-theme-base/assets/styles/main";
 @import "main";
