@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- TMS-593: Articles Layout #19
 - TMS-592: Fault Map Block #18
 - TMS-591: Page hero #17
 - TMS-595: Call to Action layout #16
