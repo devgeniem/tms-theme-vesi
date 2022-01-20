@@ -10,7 +10,10 @@
     }
 
     &__item {
+        padding-right: 1.85rem !important;
+        padding-left: 1.85rem !important;
         border-width: .12rem !important;
+        border-color: $accent-mid !important;
         font-family: $family-tertiary !important;
         font-size: .83333rem !important;
         font-weight: 400 !important;

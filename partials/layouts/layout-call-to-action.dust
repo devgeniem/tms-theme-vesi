@@ -1,0 +1,51 @@
+<div {?anchor}id="{anchor|s}"{/anchor} class="section call-to-action">
+    <div class="container keep-vertical-spacing">
+        {>"shared/layout-before-main-content" /}
+
+        {#rows}
+            <div class="call-to-action__item mt-6 mb-6 columns">
+                <div class="column is-12">
+                    <div class="call-to-action__theme-{background_color|s}">
+                        <div class="columns is-multiline is-vcentered is-gapless {container_class|s}">
+                            {?image}
+                                <div class="column is-12-tablet is-6-desktop is-relative pt-0 pb-0 call-to-action__image-container">
+                                    <div class="image is-5by3 is-hidden-desktop {image_class|s}">
+                                        {@image id=image.id size="large" class="objectfit-image" /}
+                                    </div>
+
+                                    <div class="call-to-action__image is-hidden-touch has-background-cover is-overlay" {@inlinebg id=image.id size="large" /}></div>
+
+                                    {?display_artist}
+                                        {?image_author_and_artist}
+                                            <small>{image_author_and_artist|s}</small>
+                                        {/image_author_and_artist}
+                                    {/display_artist}
+                                </div>
+                            {/image}
+
+                            <div class="column is-12-tablet is-6-desktop">
+                                <div class="call-to-action__inner">
+                                    {?title}
+                                        <h2 class="call-to-action__title h4 mt-0">
+                                            {title|s}
+                                        </h2>
+                                    {/title}
+
+                                    {?description}
+                                        <div class="call-to-action__description mt-6 mb-6">
+                                            {description|s}
+                                        </div>
+                                    {/description}
+
+                                    {>"ui/button-link" classes=button_class icon="arrow-right" icon_classes="icon--medium"  /}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {/rows}
+
+        {>"shared/layout-after-main-content" /}
+    </div>
+</div>
