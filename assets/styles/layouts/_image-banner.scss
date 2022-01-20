@@ -1,3 +1,5 @@
+// stylelint-disable declaration-no-important
+
 .image-banner {
     .overlay {
         background: linear-gradient(0deg, rgba(0, 65, 125, .75), rgba(0, 65, 125, .75));
@@ -5,5 +7,13 @@
 
     &__title {
         color: $white;
+
+        @include until($tablet) {
+            font-size: 2rem !important;
+        }
+    }
+
+    .image {
+        padding-top: 29.545454545454547% !important;
     }
 }
