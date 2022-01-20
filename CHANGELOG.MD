@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- TMS-547: Header #14
 - TMS-548: Sibling navigation #10
 - TMS-621: 404 page #9
 - TMS-550: Footer #12
