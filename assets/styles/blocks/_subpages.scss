@@ -1,0 +1,32 @@
+/*!
+ *  Copyright (c) 2022. Geniem Oy
+ */
+
+// stylelint-disable declaration-no-important
+
+.subpages {
+    a {
+        border: .12rem solid $accent-mid;
+        border-radius: .25rem;
+        color: $color-blackish !important;
+
+        &:focus {
+            outline: .0625rem solid $primary;
+            outline-offset: .25rem;
+        }
+
+        .icon {
+            fill: $accent-mid;
+        }
+
+        &.has-background-image {
+            border: 0;
+            border-radius: 0;
+            color: $white !important;
+
+            .overlay {
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .4875) 100%),
+            }
+        }
+    }
+}

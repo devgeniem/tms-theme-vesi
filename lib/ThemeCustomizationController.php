@@ -45,6 +45,8 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         add_filter( 'tms/theme/error404/home_link', [ $this, 'error404_home_link' ] );
         add_filter( 'tms/theme/error404/alignment', [ $this, 'error404_alignment' ] );
         add_filter( 'tms/acf/tab/error404/fields', [ $this, 'remove_404_alignment_setting' ] );
+
+        add_filter( 'tms/block/subpages/fields', [ $this, 'alter_subpages_fields' ] );
     }
 
     /**
@@ -186,5 +188,18 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
      */
     public function remove_404_alignment_setting( array $fields ) : array {
         return array_filter( $fields, fn( $f ) => $f->get_name() !== '404_alignment' );
+    }
+
+    /**
+     * Alter subpages block fields
+     *
+     * @param array $fields Array of ACF fields.
+     *
+     * @return array
+     */
+    public function alter_subpages_fields( array $fields  ) : array {
+        unset($fields['background_color']);
+
+        return $fields;
     }
 }
