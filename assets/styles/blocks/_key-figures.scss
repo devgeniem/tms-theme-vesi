@@ -1,0 +1,59 @@
+/*!
+ *  Copyright (c) 2022. Geniem Oy
+ */
+
+// stylelint-disable declaration-no-important
+
+.key-figures {
+    &__number {
+        font-weight: 900 !important;
+    }
+
+    &__description {
+        font-weight: 800 !important;
+    }
+
+    .has-colors-primary {
+        .key-figures__number {
+            color: $accent-light;
+        }
+
+        .key-figures__description {
+            color: $white;
+        }
+    }
+
+    .has-colors-light {
+        background-color: $color-vesi-white;
+
+        .key-figures__number {
+            color: $primary;
+        }
+
+        .key-figures__description {
+            color: $text;
+        }
+    }
+
+    .has-colors-white {
+        .key-figures__number {
+            color: $color-blackish;
+        }
+
+        .key-figures__description {
+            color: $text;
+        }
+    }
+
+    .has-colors-red {
+        background-color: $color-highlight;
+
+        .key-figures__number {
+            color: $primary;
+        }
+
+        .key-figures__description {
+            color: $color-blackish;
+        }
+    }
+}

@@ -47,6 +47,7 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         add_filter( 'tms/acf/tab/error404/fields', [ $this, 'remove_404_alignment_setting' ] );
 
         add_filter( 'tms/block/subpages/fields', [ $this, 'alter_subpages_fields' ] );
+        add_filter( 'tms/block/key_figures/fields', [ $this, 'alter_key_figures_fields' ] );
     }
 
     /**
@@ -197,8 +198,26 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
      *
      * @return array
      */
-    public function alter_subpages_fields( array $fields  ) : array {
-        unset($fields['background_color']);
+    public function alter_subpages_fields( array $fields ) : array {
+        unset( $fields['background_color'] );
+
+        return $fields;
+    }
+
+    /**
+     * Alter key figures block fields
+     *
+     * @param array $fields Array of ACF fields.
+     *
+     * @return array
+     */
+    public function alter_key_figures_fields( array $fields ) : array {
+        $fields['rows']->get_field('numbers')->get_field('background_color')->set_choices( [
+            'primary' => 'Sininen',
+            'light'   => 'Vaalea',
+            'red'     => 'Punainen',
+            'white'   => 'Valkoinen',
+        ] );
 
         return $fields;
     }
