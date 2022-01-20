@@ -1,0 +1,12 @@
+<div {?anchor}id="{anchor|s}"{/anchor} class="section fault-map-wrapper">
+    <div class="container keep-vertical-spacing">
+        {>"shared/layout-before-main-content" /}
+        <div class="columns">
+            <div class="column is-12">
+                {>"blocks/block-fault-map" /}
+            </div>
+        </div>
+
+        {>"shared/layout-after-main-content" /}
+    </div>
+</div>

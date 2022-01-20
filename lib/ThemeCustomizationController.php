@@ -5,6 +5,10 @@
 
 namespace TMS\Theme\Vesi;
 
+use TMS\Theme\Base\PostType\Page;
+use TMS\Theme\Base\PostType\Post;
+use TMS\Theme\Vesi\ACF\Layouts\FaultMapLayout;
+
 /**
  * Class ThemeCustomizationController
  *
@@ -20,11 +24,45 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
     public function hooks() : void {
         add_action( 'wp_head', [ $this, 'append_font_links' ] );
 
+        add_filter(
+            'tms/acf/field/fg_front_page_components_components/layouts',
+            [ $this, 'alter_front_page_layouts' ]
+        );
+
+        add_filter(
+            'tms/acf/field/fg_onepager_components_components/layouts',
+            [ $this, 'alter_onepager_layouts' ]
+        );
+
+        add_filter(
+            'tms/acf/field/fg_page_components_components/layouts',
+            [ $this, 'alter_page_layouts' ]
+        );
+
+        add_filter( 'tms/gutenberg/blocks', [ $this, 'alter_blocks' ] );
         add_filter( 'tms/base/breadcrumbs/after_prepare', [ $this, 'alter_breadcrumbs' ] );
         add_filter( 'tms/theme/error404/search_link', [ $this, 'error404_search_link' ] );
         add_filter( 'tms/theme/error404/home_link', [ $this, 'error404_home_link' ] );
         add_filter( 'tms/theme/error404/alignment', [ $this, 'error404_alignment' ] );
         add_filter( 'tms/acf/tab/error404/fields', [ $this, 'remove_404_alignment_setting' ] );
+    }
+
+    /**
+     * Alter theme blocks
+     *
+     * @param array $blocks Theme blocks.
+     *
+     * @return array
+     */
+    public function alter_blocks( $blocks ) {
+        $blocks['acf/fault-map'] = [
+            'post_types' => [
+                Post::SLUG,
+                Page::SLUG,
+            ],
+        ];
+
+        return $blocks;
     }
 
     /**
@@ -37,6 +75,45 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700;800&family=Secular+One&display=swap" rel="stylesheet">'; // phpcs:ignore
+    }
+
+    /**
+     * Alter front page layouts
+     *
+     * @param array $layouts ACF layouts.
+     *
+     * @return array
+     */
+    public function alter_front_page_layouts( $layouts ) {
+        $layouts[] = FaultMapLayout::class;
+
+        return $layouts;
+    }
+
+    /**
+     * Alter one pager layouts
+     *
+     * @param array $layouts ACF layouts.
+     *
+     * @return array
+     */
+    public function alter_onepager_layouts( $layouts ) {
+        $layouts[] = FaultMapLayout::class;
+
+        return $layouts;
+    }
+
+    /**
+     * Alter page layouts
+     *
+     * @param array $layouts ACF layouts.
+     *
+     * @return array
+     */
+    public function alter_page_layouts( $layouts ) {
+        $layouts[] = FaultMapLayout::class;
+
+        return $layouts;
     }
 
     /**
