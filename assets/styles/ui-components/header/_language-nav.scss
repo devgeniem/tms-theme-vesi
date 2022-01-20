@@ -1,0 +1,31 @@
+// stylelint-disable declaration-no-important
+
+.lang-nav {
+    &--horizontal {
+        > li {
+            text-align: center;
+
+            > a {
+                border-radius: 50% !important;
+                font-family: $family-tertiary;
+                font-size: 83.33333%;
+                font-weight: 400 !important;
+                letter-spacing: .04rem;
+
+                &.has-background-primary {
+                    border-color: $color-accent !important;
+                    background-color: $color-accent !important;
+
+                    &:focus {
+                        outline-color: $primary !important;
+                    }
+                }
+
+                span {
+                    position: relative;
+                    top: 1px;
+                }
+            }
+        }
+    }
+}
