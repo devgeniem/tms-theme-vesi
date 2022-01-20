@@ -1,0 +1,9 @@
+<a href="{url}" class="post-link {classes|s}" {?image_id}{@inlinebg id=image_id size="medium_large" /}{/image_id}>
+    {?image_id}
+        <div class="overlay overlay--dark-gradient"></div>
+    {/image_id}
+
+    <span class="h5 m-0 is-relative">{title|s}</span>
+
+    {>"ui/icon" icon="arrow-right" class="is-relative ml-4 ml-8-desktop icon--large" /}
+</a>
