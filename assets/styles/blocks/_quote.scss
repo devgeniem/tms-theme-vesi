@@ -1,0 +1,20 @@
+// stylelint-disable declaration-no-important
+
+.quote {
+    background-color: $color-vesi-white;
+
+    &__content {
+        color: $primary;
+        font-size: 1.8rem !important;
+        font-weight: 600 !important;
+        line-height: 1.4;
+        text-align: center !important;
+    }
+
+    &__author {
+        color: $color-blackish;
+        font-size: 1rem !important;
+        font-weight: 300 !important;
+        text-transform: none !important;
+    }
+}

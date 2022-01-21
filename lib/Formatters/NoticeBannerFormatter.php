@@ -44,7 +44,7 @@ class NoticeBannerFormatter implements Formatter {
      * @return array
      */
     public function format( array $data ) : array {
-        if ( $data['is_alarm'] ) {
+        if ( $data['is_alarm'] ?? false ) {
             $data['text_color']        = 'has-text-primary';
             $data['container_classes'] = 'has-background-highlight';
         }
