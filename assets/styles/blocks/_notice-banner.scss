@@ -23,17 +23,15 @@
         a {
             color: $color-blackish !important;
         }
+
+        .icon {
+            fill: $primary !important;
+        }
     }
 
     &__content {
         p {
             margin-bottom: 0;
-        }
-    }
-
-    &__link {
-        .icon {
-            display: none;
         }
     }
 }
