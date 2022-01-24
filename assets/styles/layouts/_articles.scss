@@ -12,6 +12,12 @@
     }
 
     .highlight-article {
+        h2 {
+            a {
+                color: $color-blackish !important;
+            }
+        }
+        
         &__fields {
             @include until($tablet) {
                 display: flex;
