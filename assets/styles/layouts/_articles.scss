@@ -49,6 +49,10 @@
             @include from($desktop) {
                 padding-left: 5rem !important;
             }
+
+            .pill {
+                border-color: $accent-mid !important;
+            }
         }
     }
 
@@ -63,7 +67,6 @@
             > span {
                 font-weight: 800 !important;
             }
-
         }
     }
 }
