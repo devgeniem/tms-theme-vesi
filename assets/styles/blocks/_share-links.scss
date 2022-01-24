@@ -1,0 +1,34 @@
+// stylelint-disable declaration-no-important
+
+.share-links {
+    justify-content: center;
+    
+    h2 {
+        font-size: 1.75rem;
+        font-weight: 900;
+        letter-spacing: .04rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    a {
+        width: 3rem;
+        height: 3rem;
+        border: .12rem solid $accent-light !important;
+
+        &:hover,
+        &:focus {
+            background-color: $primary !important;
+
+            .icon {
+                fill: $primary-invert !important;
+            }
+        }
+
+        .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            fill: $primary !important;
+        }
+    }
+}
