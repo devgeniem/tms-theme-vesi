@@ -13,11 +13,15 @@
 
     .highlight-article {
         h2 {
+            @include until($tablet) {
+                font-size: $size-4 !important;
+            }
+
             a {
                 color: $color-blackish !important;
             }
         }
-        
+
         &__fields {
             @include until($tablet) {
                 display: flex;
@@ -40,6 +44,10 @@
                         display: inline-block !important;
                     }
                 }
+            }
+
+            @include from($desktop) {
+                padding-left: 5rem !important;
             }
         }
     }
