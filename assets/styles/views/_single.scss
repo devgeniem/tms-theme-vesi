@@ -1,0 +1,31 @@
+// stylelint-disable declaration-no-important
+
+.single-post {
+    .related-posts {
+        background-color: $color-vesi-white !important;
+        color: $color-blackish;
+
+        h2,
+        h3 {
+            color: $color-blackish;
+        }
+
+        &__link {
+            color: $color-blackish;
+        }
+
+        &__excerpt {
+            font-size: 85%;
+        }
+
+        &__read-more {
+            color: $color-blackish;
+            font-family: $family-tertiary;
+        }
+
+        .pill {
+            padding-top: .375rem;
+            padding-bottom: .375rem;
+        }
+    }
+}
