@@ -1,0 +1,14 @@
+// stylelint-disable declaration-no-important
+
+.image-block {
+    &__caption {
+        font-weight: 300;
+        font-size: 85%;
+
+        strong {
+            font-weight: 300 !important;
+            text-align: right;
+        }
+
+    }
+}
