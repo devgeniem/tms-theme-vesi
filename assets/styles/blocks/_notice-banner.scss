@@ -1,0 +1,37 @@
+/*!
+ *  Copyright (c) 2022. Geniem Oy
+ */
+
+// stylelint-disable declaration-no-important
+
+.notice-banner {
+    &.has-background-primary {
+        background-color: $color-accent !important;
+
+        h2 {
+            color: $white;
+        }
+    }
+
+    &.has-background-highlight {
+        background-color: $color-highlight;
+
+        h2 {
+            color: $primary;
+        }
+
+        a {
+            color: $color-blackish !important;
+        }
+
+        .icon {
+            fill: $primary !important;
+        }
+    }
+
+    &__content {
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

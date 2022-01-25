@@ -5,6 +5,8 @@
 
 namespace TMS\Theme\Vesi;
 
+use Geniem\ACF\Field\TrueFalse;
+use TMS\Theme\Base\Logger;
 use TMS\Theme\Base\PostType\Page;
 use TMS\Theme\Base\PostType\Post;
 use TMS\Theme\Vesi\ACF\Layouts\FaultMapLayout;
@@ -48,6 +50,8 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
 
         add_filter( 'tms/block/subpages/fields', [ $this, 'alter_subpages_fields' ] );
         add_filter( 'tms/block/key_figures/fields', [ $this, 'alter_key_figures_fields' ] );
+        add_filter( 'tms/block/notice_banner/fields', [ $this, 'alter_notice_banner_fields' ], 10, 2 );
+        add_filter( 'tms/acf/layout/_notice_banner/fields', [ $this, 'alter_notice_banner_fields' ], 10, 2 );
     }
 
     /**
@@ -212,12 +216,47 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
      * @return array
      */
     public function alter_key_figures_fields( array $fields ) : array {
-        $fields['rows']->get_field('numbers')->get_field('background_color')->set_choices( [
+        $fields['rows']->get_field( 'numbers' )->get_field( 'background_color' )->set_choices( [
             'primary' => 'Sininen',
             'light'   => 'Vaalea',
             'red'     => 'Punainen',
             'white'   => 'Valkoinen',
         ] );
+
+        return $fields;
+    }
+
+    /**
+     * Alter notice banner block fields
+     *
+     * @param array  $fields Array of ACF fields.
+     * @param string $key    Parent key.
+     *
+     * @return array
+     */
+    public function alter_notice_banner_fields( array $fields, string $key ) : array {
+        unset( $fields['background_color'] );
+
+        try {
+            $strings = [
+                'is_alarm' => [
+                    'label'        => 'Vakava huomio',
+                    'instructions' => '',
+                ],
+            ];
+
+            $is_alarm_field = ( new TrueFalse( $strings['is_alarm']['label'] ) )
+                ->set_key( "${key}_is_alarm" )
+                ->set_name( 'is_alarm' )
+                ->use_ui()
+                ->set_default_value( false )
+                ->set_instructions( $strings['is_alarm']['instructions'] );
+
+            $fields[] = $is_alarm_field;
+        }
+        catch ( Exception $e ) {
+            ( new Logger() )->error( $e->getMessage(), $e->getTraceAsString() );
+        }
 
         return $fields;
     }
