@@ -6,6 +6,8 @@
 
 .notice-banner {
     &.has-background-primary {
+        background-color: $color-accent !important;
+
         h2 {
             color: $white;
         }
@@ -21,20 +23,15 @@
         a {
             color: $color-blackish !important;
         }
-    }
 
-    &__content {
-        padding-top: 1.75rem !important;
-        padding-bottom: 1.75rem !important;
-
-        p {
-            margin-bottom: 0;
+        .icon {
+            fill: $primary !important;
         }
     }
 
-    &__link {
-        .icon {
-            display: none;
+    &__content {
+        p {
+            margin-bottom: 0;
         }
     }
 }
