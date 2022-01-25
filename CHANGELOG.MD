@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- TMS-601: Quote styles #27
 - TMS-607: Content Columns Layout #26
 - TMS-616: Notice Banner Block #25
 - TMS-604: Key Figures Block #24
