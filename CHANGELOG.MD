@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- TMS-604: Sub pages styles #23
 - TMS-603: Grid Block #22
 - TMS-603: Link List Block #21
 - TMS-615: Image Banner Layout #20
