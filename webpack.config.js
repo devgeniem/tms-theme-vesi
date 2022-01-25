@@ -1,11 +1,8 @@
 const path = require( 'path' );
 const webpack = require( 'webpack' );
 const BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' );
-const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
-const SpriteLoaderPlugin = require( 'svg-sprite-loader/plugin' );
 const TerserPlugin = require( 'terser-webpack-plugin' );
-const CopyPlugin = require( 'copy-webpack-plugin' );
 
 // Check for production mode.
 const isProduction = process.env.NODE_ENV === 'production';
@@ -160,9 +157,6 @@ const allPlugins = [
     // Convert JS to CSS.
     new MiniCssExtractPlugin( { filename: '[name].css' } ),
 
-    // Create hidden SVG sprite with inline style.
-    new SpriteLoaderPlugin( { plainSprite: true, spriteAttrs: { style: 'display: none;' } } ),
-
     // Provide jQuery instance for all modules.
     new webpack.ProvidePlugin( { jQuery: 'jquery' } ),
 ];
@@ -187,9 +181,6 @@ if ( isProduction ) {
             },
         } ),
     ];
-
-    // Delete distribution folder for production build.
-    allPlugins.push( new CleanWebpackPlugin( { } ) );
 }
 
 module.exports = [
