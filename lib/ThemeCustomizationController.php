@@ -51,7 +51,7 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         add_filter( 'tms/block/subpages/fields', [ $this, 'alter_subpages_fields' ] );
         add_filter( 'tms/block/key_figures/fields', [ $this, 'alter_key_figures_fields' ] );
         add_filter( 'tms/block/notice_banner/fields', [ $this, 'alter_notice_banner_fields' ], 10, 2 );
-        add_filter( 'tms/acf/layout/notice_banner/fields', [ $this, 'alter_notice_banner_fields' ], 10, 2 );
+        add_filter( 'tms/acf/layout/_notice_banner/fields', [ $this, 'alter_notice_banner_fields' ], 10, 2 );
     }
 
     /**
