@@ -139,7 +139,6 @@ const allOptimizations = {
     },
 };
 
-
 // All plugins to use.
 const allPlugins = [
     // Use BrowserSync.
