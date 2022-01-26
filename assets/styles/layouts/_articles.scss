@@ -10,53 +10,16 @@
     @include from(1680px) {
         background-position: 98% 10%;
     }
+}
 
-    .highlight-article {
-        h2 {
-            @include until($tablet) {
-                font-size: $size-4 !important;
-            }
-
-            a {
-                color: $color-blackish !important;
-            }
-        }
-
-        &__fields {
-            @include until($tablet) {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                padding-right: 0 !important;
-                padding-bottom: 0 !important;
-                padding-left: 0 !important;
-
-                .pill {
-                    order: 3;
-                    margin-top: 1.5rem;
-                }
-
-                .entry__excerpt {
-                    color: $text !important;
-                    font-size: 85%;
-
-                    span {
-                        display: inline-block !important;
-                    }
-                }
-            }
-
-            @include from($desktop) {
-                padding-left: 5rem !important;
-            }
-
-            .pill {
-                border-color: $accent-mid !important;
-            }
-        }
-    }
-
+.blog,
+.layout-articles {
     .entry {
+        &--list {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid $accent-light;
+        }
+
         &__title {
             > a {
                 color: $color-blackish;
