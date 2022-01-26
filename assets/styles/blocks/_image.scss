@@ -2,13 +2,12 @@
 
 .image-block {
     &__caption {
+        font-size: .8823rem !important;
         font-weight: 300;
-        font-size: 85%;
 
         strong {
             font-weight: 300 !important;
             text-align: right;
         }
-
     }
 }
