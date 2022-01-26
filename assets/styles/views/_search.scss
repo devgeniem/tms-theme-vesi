@@ -1,0 +1,94 @@
+// stylelint-disable declaration-no-important
+
+.search {
+    &__form {
+        > .has-background-secondary {
+            background-color: $color-vesi-white;
+        }
+
+        .search-input-container {
+            > div {
+                width: 31.5rem;
+
+                > input {
+                    width: 100%;
+                    padding: .845rem 1.25rem;
+                    border-width: .12rem;
+                    border-radius: 5.888rem;
+                    border-color: $accent-mid;
+                }
+            }
+
+            > .is-flex {
+                justify-content: center;
+            }
+        }
+
+        .duet-date__input {
+            border-radius: 0;
+        }
+    }
+
+    .search-form__button {
+        align-self: flex-end;
+
+        .icon {
+            fill: $accent-light !important;
+        }
+    }
+
+    .gform_wrapper input[type=checkbox] + label::before, .gform_wrapper input[type=checkbox] + label:before, .is-checkradio[type=checkbox] + label::before, .is-checkradio[type=checkbox] + label:before {
+        border-radius: 0 !important;
+    }
+
+    .gform_wrapper input[type=radio] + label, .gform_wrapper input[type=checkbox] + label, .is-checkradio[type=radio] + label, .is-checkradio[type=checkbox] + label {
+        font-family: $family-tertiary;
+    }
+
+    .search-item {
+        background-color: $color-vesi-white;
+    }
+}
+
+.search-item {
+    &__title {
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__meta-item {
+        font-weight: 300 !important;
+    }
+
+    .breadcrumb {
+        .breadcrumbs {
+            &__nav {
+                color: $color-blackish;
+                font-size: 85%;
+                font-weight: 300;
+
+                a {
+                    color: $color-blackish;
+                }
+
+                .icon {
+                    display: none !important;
+                }
+
+                li + li {
+                    &::before {
+                        content: "\0227B";
+                        display: inline-block !important;
+                        margin: 0 .25rem;
+                        color: $color-blackish;
+                    }
+                }
+            }
+        }
+    }
+}
