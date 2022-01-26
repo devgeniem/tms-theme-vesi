@@ -1,0 +1,25 @@
+.materials {
+    &__item {
+        background-color: $color-vesi-white;
+        color: $color-blackish;
+
+        a {
+            color: $color-blackish;
+        }
+
+        a,
+        .button {
+            .icon {
+                fill: $accent-mid !important;
+            }
+        }
+    }
+
+    &__link {
+        color: $color-blackish !important;
+    }
+
+    &__meta {
+        letter-spacing: .15em;
+    }
+}
