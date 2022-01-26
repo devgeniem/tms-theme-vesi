@@ -1,0 +1,20 @@
+.pagination {
+    &-item {
+        a {
+            border: .12rem solid $accent-mid !important;
+            border-radius: 50% !important;
+            background-color: $white !important;
+            color: $primary !important;
+            font-family: $family-tertiary;
+            font-size: 85%;
+        }
+    }
+
+    .is-current {
+        a {
+            background-color: $primary !important;
+            color: $primary-invert !important;
+            border-color: $primary !important;
+        }
+    }
+}
