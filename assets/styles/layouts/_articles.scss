@@ -15,6 +15,11 @@
 .blog,
 .layout-articles {
     .entry {
+        &--list {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid $accent-light;
+        }
+
         &__title {
             > a {
                 color: $color-blackish;
