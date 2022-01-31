@@ -3,6 +3,8 @@ const webpack = require( 'webpack' );
 const BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const TerserPlugin = require( 'terser-webpack-plugin' );
+const ImageMinimizerPlugin = require( "image-minimizer-webpack-plugin" );
+const { extendDefaultPlugins } = require( "svgo" );
 
 // Check for production mode.
 const isProduction = process.env.NODE_ENV === 'production';
@@ -72,29 +74,7 @@ const allModules = {
         {
             test: /\.(gif|jpe?g|png|svg)(\?[a-z0-9=\.]+)?$/,
             exclude: [ /assets\/fonts/, /assets\/icons/, /node_modules/ ],
-            type: 'asset/resource',
-            use: [
-                {
-                    loader: 'image-webpack-loader',
-                    options: {
-
-                        // Disable imagemin for development build.
-                        disable: ! isProduction,
-                        mozjpeg: {
-                            quality: 70
-                        },
-                        optipng: {
-                            enabled: false
-                        },
-                        pngquant: {
-                            quality: [ 0.7, 0.7 ]
-                        },
-                        gifsicle: {
-                            interlaced: false
-                        }
-                    }
-                }
-            ]
+            type: 'asset',
         },
         {
             test: /\.(eot|svg|ttf|otf|woff(2)?)(\?[a-z0-9=\.]+)?$/,
@@ -170,7 +150,7 @@ if ( isProduction ) {
     allOptimizations.minimizer = [
 
         // Optimize for production build.
-        new TerserPlugin({
+        new TerserPlugin( {
             parallel: true,
             terserOptions: {
                 output: {
@@ -181,7 +161,40 @@ if ( isProduction ) {
                     drop_console: true // eslint-disable-line camelcase
                 }
             }
-        })
+        } ),
+
+        new ImageMinimizerPlugin( {
+            minimizer: {
+                implementation: ImageMinimizerPlugin.imageminMinify,
+                options: {
+                    // Lossless optimization with custom option
+                    // Feel free to experiment with options for better result for you
+                    plugins: [
+                        [ "gifsicle", { interlaced: true } ],
+                        [ "jpegtran", { progressive: true } ],
+                        [ "optipng", { optimizationLevel: 5 } ],
+                        // Svgo configuration here https://github.com/svg/svgo#configuration
+                        [
+                            "svgo",
+                            {
+                                plugins: extendDefaultPlugins( [
+                                    {
+                                        name: "removeViewBox",
+                                        active: false,
+                                    },
+                                    {
+                                        name: "addAttributesToSVGElement",
+                                        params: {
+                                            attributes: [ { xmlns: "http://www.w3.org/2000/svg" } ],
+                                        },
+                                    },
+                                ] ),
+                            },
+                        ],
+                    ],
+                },
+            },
+        } ),
     ];
 }
 
