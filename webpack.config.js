@@ -1,8 +1,11 @@
 const path = require( 'path' );
 const webpack = require( 'webpack' );
 const BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' );
+const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
+const SpriteLoaderPlugin = require( 'svg-sprite-loader/plugin' );
 const TerserPlugin = require( 'terser-webpack-plugin' );
+const CopyPlugin = require( 'copy-webpack-plugin' );
 
 // Check for production mode.
 const isProduction = process.env.NODE_ENV === 'production';
@@ -25,6 +28,20 @@ const entryPoints = {
 const allModules = {
     rules: [
         {
+            enforce: 'pre',
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+                loader: 'eslint-loader',
+                options: {
+                    configFile: '.eslintrc.json',
+                    fix: false,
+                    failOnWarning: false,
+                    failOnError: true,
+                },
+            },
+        },
+        {
             test: /\.js$/,
             exclude: /node_modules/,
             use: {
@@ -41,9 +58,9 @@ const allModules = {
                     presets: [ '@babel/preset-env' ],
 
                     // Enable dynamic imports.
-                    plugins: [ '@babel/plugin-syntax-dynamic-import' ]
-                }
-            }
+                    plugins: [ '@babel/plugin-syntax-dynamic-import' ],
+                },
+            },
         },
         {
             test: /\.scss$/,
@@ -51,55 +68,40 @@ const allModules = {
                 MiniCssExtractPlugin.loader,
                 {
                     loader: 'css-loader',
-                    options: {
-                        sourceMap: true
-                    }
+                    options: { sourceMap: true },
                 },
                 {
                     loader: 'postcss-loader',
-                    options: {
-                        sourceMap: true
-                    }
+                    options: { sourceMap: true },
                 },
                 {
                     loader: 'sass-loader',
-                    options: {
-                        sourceMap: true
-                    }
-                }
-            ]
+                    options: { sourceMap: true },
+                },
+            ],
         },
         {
             test: /\.(gif|jpe?g|png|svg)(\?[a-z0-9=\.]+)?$/,
             exclude: [ /assets\/fonts/, /assets\/icons/, /node_modules/ ],
-            type: 'asset/resource',
             use: [
+                'file-loader?name=[name].[ext]',
                 {
                     loader: 'image-webpack-loader',
                     options: {
-
                         // Disable imagemin for development build.
                         disable: ! isProduction,
-                        mozjpeg: {
-                            quality: 70
-                        },
-                        optipng: {
-                            enabled: false
-                        },
-                        pngquant: {
-                            quality: [ 0.7, 0.7 ]
-                        },
-                        gifsicle: {
-                            interlaced: false
-                        }
-                    }
-                }
-            ]
+                        mozjpeg: { quality: 70 },
+                        optipng: { enabled: false },
+                        pngquant: { quality: [ 0.7, 0.7 ] },
+                        gifsicle: { interlaced: false },
+                    },
+                },
+            ],
         },
         {
             test: /\.(eot|svg|ttf|otf|woff(2)?)(\?[a-z0-9=\.]+)?$/,
             exclude: [ /assets\/images/, /assets\/icons/, /node_modules/ ],
-            type: 'asset/resource',
+            use: 'file-loader?name=[name].[ext]',
         },
         {
             test: /assets\/icons\/.*\.svg(\?[a-z0-9=\.]+)?$/,
@@ -109,23 +111,20 @@ const allModules = {
                     options: {
                         symbolId: 'icon-[name]',
                         extract: true,
-                        spriteFilename: 'icons.svg'
-                    }
+                        spriteFilename: 'icons.svg',
+                    },
                 },
                 {
                     loader: 'svgo-loader',
                     options: {
                         plugins: [
-                            { name: 'removeTitle' },
-                            {
-                                name: 'removeAttrs',
-                                params: { attrs: [ 'path:fill', 'path:class' ] }
-                            }
-                        ]
-                    }
-                }
-            ]
-        }
+                            { removeTitle: true },
+                            { removeAttrs: { attrs: [ 'path:fill', 'path:class' ] } },
+                        ],
+                    },
+                },
+            ],
+        },
     ],
 };
 
@@ -143,8 +142,19 @@ const allOptimizations = {
     },
 };
 
+const hyphenopolyPath = path.resolve( __dirname, 'node_modules', 'hyphenopoly' );
+
 // All plugins to use.
 const allPlugins = [
+    new CopyPlugin( {
+        patterns: [
+            { from: path.resolve( hyphenopolyPath, 'patterns', 'fi.hpb' ), to: 'hyphenopoly' },
+            { from: path.resolve( hyphenopolyPath, 'patterns', 'sv.hpb' ), to: 'hyphenopoly' },
+            { from: path.resolve( hyphenopolyPath, 'patterns', 'en-us.hpb' ), to: 'hyphenopoly' },
+            { from: path.resolve( hyphenopolyPath, 'hyphenEngine.wasm' ), to: 'hyphenopoly' },
+        ],
+    } ),
+
     // Use BrowserSync.
     new BrowserSyncPlugin(
         {
@@ -161,6 +171,9 @@ const allPlugins = [
     // Convert JS to CSS.
     new MiniCssExtractPlugin( { filename: '[name].css' } ),
 
+    // Create hidden SVG sprite with inline style.
+    new SpriteLoaderPlugin( { plainSprite: true, spriteAttrs: { style: 'display: none;' } } ),
+
     // Provide jQuery instance for all modules.
     new webpack.ProvidePlugin( { jQuery: 'jquery' } ),
 ];
@@ -170,23 +183,34 @@ if ( isProduction ) {
     allOptimizations.minimizer = [
 
         // Optimize for production build.
-        new TerserPlugin({
+        new TerserPlugin( {
+            cache: true,
             parallel: true,
+            sourceMap: true,
             terserOptions: {
                 output: {
-                    comments: false
+                    comments: false,
                 },
                 compress: {
                     warnings: false,
-                    drop_console: true // eslint-disable-line camelcase
-                }
-            }
-        })
+                    drop_console: true, // eslint-disable-line camelcase
+                },
+            },
+        } ),
     ];
+
+    // Delete distribution folder for production build.
+    allPlugins.push( new CleanWebpackPlugin( {
+        cleanAfterEveryBuildPatterns: [ '!hyphenopoly/*' ],
+    } ) );
 }
 
 module.exports = [
     {
+        node: {
+            fs: 'empty', // <- prevent "fs not found"
+        },
+
         resolve: {
             alias: {
                 scripts: path.resolve( __dirname, 'assets', 'scripts' ),
