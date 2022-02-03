@@ -1,0 +1,13 @@
+.page-materials {
+    &__form {
+        label {
+            font-weight: 300 !important;
+        }
+
+        input {
+            border: 2px solid $accent-mid;
+            border-radius: 5.555555555rem !important;
+            font-weight: 300;
+        }
+    }
+}

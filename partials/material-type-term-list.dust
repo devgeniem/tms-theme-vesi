@@ -1,0 +1,15 @@
+{?terms}
+    <ul class="is-unstyled is-flex is-flex-wrap-wrap" aria-label="{strings.terms.aria_label|s}">
+        {#terms}
+            <li class="p-2">
+                <a href="{permalink|u}#main-content" class="pill {link_classes|s}" {link_attributes|s}>
+                    {?is_active}
+                        {>"ui/icon" icon="checkmark" class="icon--medium mr-2" /}
+                    {/is_active}
+
+                    {name|s}
+                </a>
+            </li>
+        {/terms}
+    </ul>
+{/terms}
