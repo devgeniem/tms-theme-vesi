@@ -17,3 +17,15 @@
         }
     }
 }
+
+.single,
+.page {
+    .is-content-grid {
+        > p {
+            @include from($desktop) {
+                grid-column: 3 / 4;
+            }
+        }
+    }
+
+}
