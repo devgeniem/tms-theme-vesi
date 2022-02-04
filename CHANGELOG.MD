@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- TMS-611: Related posts styles #33
+
 ## 0.0.1 2022-01-26
 
 ### Added
