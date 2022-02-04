@@ -54,7 +54,8 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         add_filter( 'tms/acf/layout/_notice_banner/fields', [ $this, 'alter_notice_banner_fields' ], 10, 2 );
         add_filter( 'tms/theme/search/search_item', [ $this, 'search_classes' ] );
         add_filter( 'tms/theme/base/search_result_item', [ $this, 'alter_search_item' ] );
-
+        add_filter( 'tms/theme/single_blog/classes', [ $this, 'single_blog_classes', ] );
+        add_filter( 'comment_form_submit_button', [ $this, 'override_comment_form_submit' ], 20, 0 );
     }
 
     /**
@@ -272,12 +273,7 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
      * @return array
      */
     public function search_classes( $classes ) : array {
-//        $classes['search_item']          = 'has-border-1 has-border-divider-invert';
-//        $classes['search_item_excerpt']  = 'has-text-small';
-//        $classes['search_form']          = 'has-colors-accent-secondary';
         $classes['search_filter_button'] = 'is-primary';
-
-//        $classes['event_search_section'] = 'has-border-bottom-1 has-border-divider-invert';
 
         return $classes;
     }
@@ -287,5 +283,29 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         $search_item->meta['category'] = false;
 
         $search_item->post_excerpt = wp_trim_words( $search_item->post_content, 30 );
+    }
+
+    public function single_blog_classes( array $classes ) {
+        return [
+            'info_section'         => '',
+            'info_section_button'  => 'is-primary',
+            'info_section_authors' => '',
+        ];
+
+    }
+
+    /**
+     * Comment form submit button.
+     *
+     * @return string
+     */
+    public function override_comment_form_submit() : string {
+        return sprintf(
+            '<button name="submit" type="submit" id="submit" class="button button--icon is-primary" >%s %s</button>',
+            __( 'Send Comment', 'tms-theme-base' ),
+            '<svg class="icon icon--arrow-right icon--medium is-primary-invert">
+                <use xlink:href="#icon-arrow-right"></use>
+            </svg>'
+        );
     }
 }
