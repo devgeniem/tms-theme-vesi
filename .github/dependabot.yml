@@ -29,3 +29,5 @@ updates:
     labels:
       - "maintenance"
       - "maintenance-npm"
+    ignore:
+      - dependency-name: "indicate"
