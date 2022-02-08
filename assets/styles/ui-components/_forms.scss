@@ -1,0 +1,88 @@
+.container .gform_wrapper {
+    background-color: $color-vesi-white;
+    color: $color-blackish;
+    font-weight: 300;
+
+    label,
+    .gfield_label {
+        font-weight: 300;
+    }
+
+    .gfield_required {
+        color: $color-blackish;
+        font-weight: 300 !important;
+    }
+
+    select,
+    input,
+    textarea {
+        border-radius: .25rem;
+        border: .12rem solid $accent-mid;
+        padding: 0.8rem !important;
+
+        &:focus {
+            outline-color: $primary;
+        }
+    }
+
+    input[type="submit"] {
+        padding: 0.65rem 2rem !important;
+    }
+}
+
+input[type="text"] {
+    border-radius: 0;
+
+    .gform_drop_area {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .gform_button_select_files,
+    .gform_delete_file {
+        border-color: $black;
+        background-color: transparent;
+        color: $black;
+
+        &:hover {
+            border-color: $white;
+            background-color: $black;
+            color: $white;
+        }
+    }
+
+    .gform_button_select_files:after {
+        content: "\002B";
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        padding-bottom: 0.2rem;
+        font-family: inherit;
+    }
+
+    .gform_delete_file {
+        padding: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .ginput_preview {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .gform_validation_errors {
+        padding: 0.5rem 3rem;
+    }
+}
+
+form {
+    select,
+    input,
+    textarea {
+        border-radius: 0;
+        border-color: $primary;
+    }
+}
