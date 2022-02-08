@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- TMS-596: Logo Wall #39
 - TMS-589: Material block styles #36
 - TMS-588: Articles view #35
 - TMS-617: Text Block Layout #34
