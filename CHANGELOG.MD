@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- TMS-588: Articles view #35
 - TMS-617: Text Block Layout #34
 - TMS-620: Search styles #32
 - TMS-611: Related posts styles #33
