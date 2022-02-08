@@ -1,0 +1,23 @@
+.page-materials {
+    &__form {
+        label {
+            margin-bottom: .25rem !important;
+            font-weight: 300 !important;
+        }
+
+        input {
+            padding-left: 1rem !important;
+            border: 2px solid $accent-mid;
+            border-radius: 5.555555555rem !important;
+            font-weight: 300;
+        }
+
+        .button {
+            .icon {
+                display: inline-block !important;
+                width: .75rem;
+                height: .75rem;
+            }
+        }
+    }
+}

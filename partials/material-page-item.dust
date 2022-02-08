@@ -1,0 +1,44 @@
+<li class="column is-12 is-6-desktop">
+    <div class="materials__item is-flex p-4 p-6-desktop ">
+        <div
+            class="image is-180x180 is-hidden-touch is-flex is-align-items-center is-justify-content-center is-flex-shrink-0 mr-4 mr-6-desktop">
+            {?image}
+                {@image id=image size="medium" class="objectfit-image" alt="" /}
+            {:else}
+                {>"ui/icon" icon="file" class="icon--xlarge is-gray" /}
+            {/image}
+        </div>
+
+        <div class="has-width-100">
+            <div class="is-flex is-flex-wrap-wrap">
+                <div class="is-flex has-width-100">
+                    <div>
+                        <a href="{url}"
+                           class="is-inline-block h5 mb-2 materials__link {title_classes|s}"
+                           download>
+                            {title|s}
+                            {>"ui/icon" icon="chevron-right" class="ml-1 icon--small" /}
+                        </a>
+
+                        <div
+                            class="materials__meta mt-1 has-text-gray has-line-height-tight has-text-weight-extra-bold has-text-small has-divider-x-1 has-divider-x-1">
+                            <span class="is-inline-block pr-3 is-uppercase">{filetype}</span>
+                            <span class="is-inline-block ml-2">{filesize|s}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {?description}
+                <div class="mt-4 has-text-small keep-vertical-spacing">
+                    {description|s}
+                </div>
+            {/description}
+
+            <a href="{url}" class="button is-primary button--icon is-outlined mt-4" download>
+                {button_text|s}
+                {>"ui/icon" icon="download" class="icon--medium ml-2" /}
+            </a>
+        </div>
+    </div>
+</li>
