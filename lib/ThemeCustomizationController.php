@@ -52,6 +52,9 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         add_filter( 'tms/block/key_figures/fields', [ $this, 'alter_key_figures_fields' ] );
         add_filter( 'tms/block/notice_banner/fields', [ $this, 'alter_notice_banner_fields' ], 10, 2 );
         add_filter( 'tms/acf/layout/_notice_banner/fields', [ $this, 'alter_notice_banner_fields' ], 10, 2 );
+        add_filter( 'tms/theme/search/search_item', [ $this, 'search_classes' ] );
+        add_filter( 'tms/theme/base/search_result_item', [ $this, 'alter_search_item' ] );
+
     }
 
     /**
@@ -259,5 +262,30 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         }
 
         return $fields;
+    }
+
+    /**
+     * Search classes.
+     *
+     * @param array $classes Search view classes.
+     *
+     * @return array
+     */
+    public function search_classes( $classes ) : array {
+        $classes['search_filter_button'] = 'is-primary';
+
+        return $classes;
+    }
+
+    /**
+     * Alter search item
+     *
+     * @param \stdClass $search_item Search item.
+     */
+    public function alter_search_item( $search_item ) {
+        $search_item->content_type     = false;
+        $search_item->meta['category'] = false;
+
+        $search_item->post_excerpt = wp_trim_words( $search_item->post_content, 30 );
     }
 }

@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- TMS-620: Search styles #32
 - TMS-611: Related posts styles #33
 
 ## 0.0.1 2022-01-26
