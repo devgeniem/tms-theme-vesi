@@ -2,5 +2,11 @@
     select {
         border-radius: 0 !important;
         border: .12rem solid $accent-mid;
+
+        &:focus {
+            border-radius: 0;
+            border-color: $color-blackish;
+            outline: none;
+        }
     }
 }
