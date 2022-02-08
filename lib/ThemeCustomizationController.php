@@ -272,16 +272,16 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
      * @return array
      */
     public function search_classes( $classes ) : array {
-//        $classes['search_item']          = 'has-border-1 has-border-divider-invert';
-//        $classes['search_item_excerpt']  = 'has-text-small';
-//        $classes['search_form']          = 'has-colors-accent-secondary';
         $classes['search_filter_button'] = 'is-primary';
-
-//        $classes['event_search_section'] = 'has-border-bottom-1 has-border-divider-invert';
 
         return $classes;
     }
 
+    /**
+     * Alter search item
+     *
+     * @param \stdClass $search_item Search item.
+     */
     public function alter_search_item( $search_item ) {
         $search_item->content_type     = false;
         $search_item->meta['category'] = false;
