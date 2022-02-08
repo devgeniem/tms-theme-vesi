@@ -54,7 +54,7 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         add_filter( 'tms/acf/layout/_notice_banner/fields', [ $this, 'alter_notice_banner_fields' ], 10, 2 );
         add_filter( 'tms/theme/search/search_item', [ $this, 'search_classes' ] );
         add_filter( 'tms/theme/base/search_result_item', [ $this, 'alter_search_item' ] );
-        add_filter( 'tms/theme/single_blog/classes', [ $this, 'single_blog_classes', ] );
+        add_filter( 'tms/theme/single_blog/classes', [ $this, 'single_blog_classes' ] );
         add_filter( 'comment_form_submit_button', [ $this, 'override_comment_form_submit' ], 20, 0 );
     }
 
@@ -285,6 +285,13 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         $search_item->post_excerpt = wp_trim_words( $search_item->post_content, 30 );
     }
 
+    /**
+     * Alter single blog view classes
+     *
+     * @param array $classes Array of classes.
+     *
+     * @return string[]
+     */
     public function single_blog_classes( array $classes ) {
         return [
             'info_section'         => '',
