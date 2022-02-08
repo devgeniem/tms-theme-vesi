@@ -285,6 +285,13 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         $search_item->post_excerpt = wp_trim_words( $search_item->post_content, 30 );
     }
 
+    /**
+     * Alter single blog view classes
+     *
+     * @param array $classes Array of classes.
+     *
+     * @return string[]
+     */
     public function single_blog_classes( array $classes ) {
         return [
             'info_section'         => '',
