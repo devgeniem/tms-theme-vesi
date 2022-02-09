@@ -1,0 +1,19 @@
+.icon-links {
+    background-color: $color-vesi-white !important;
+    color: $color-blackish !important;
+
+    &__item {
+        > .icon {
+            width: 6rem !important;
+            height: 6rem !important;
+            padding: 1.25rem;
+            background-color: $white !important;
+            fill: $primary !important;
+        }
+    }
+
+    &__item-description {
+        color: $text !important;
+        font-weight: 600;
+    }
+}
