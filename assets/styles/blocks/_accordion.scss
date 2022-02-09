@@ -3,6 +3,12 @@
         border-color: $accent-mid !important;
     }
 
+    &__title-icon {
+        .icon {
+            fill: $accent-light !important;
+        }
+    }
+
     &__row-title-text {
         color: $color-blackish !important;
         font-size: 1.2rem !important;;
@@ -11,5 +17,9 @@
         @include from($desktop) {
             font-size: 1.2rem !important;;
         }
+    }
+
+    &__content {
+        padding-top: 1.5rem;
     }
 }
