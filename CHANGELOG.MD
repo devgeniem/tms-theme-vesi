@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- TMS-609: Modal styles #45
 - TMS-585: Single blog article #44
 - TMS-600: Accordion #42
 - TMS-602: Table styles #41
