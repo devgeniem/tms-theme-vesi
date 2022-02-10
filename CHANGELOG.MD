@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- TMS-614: Forms #48
 - TMS-613: Contact block styles #46
 - TMS-609: Modal styles #45
 - TMS-585: Single blog article #44
