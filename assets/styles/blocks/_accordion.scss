@@ -1,0 +1,15 @@
+.accordion {
+    &__row {
+        border-color: $accent-mid !important;
+    }
+
+    &__row-title-text {
+        color: $color-blackish !important;
+        font-size: 1.2rem !important;;
+        font-weight: 700 !important;
+
+        @include from($desktop) {
+            font-size: 1.2rem !important;;
+        }
+    }
+}
