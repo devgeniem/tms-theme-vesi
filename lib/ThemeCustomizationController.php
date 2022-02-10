@@ -280,6 +280,11 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         return $classes;
     }
 
+    /**
+     * Alter search item
+     *
+     * @param \stdClass $search_item Search item.
+     */
     public function alter_search_item( $search_item ) {
         $search_item->content_type     = false;
         $search_item->meta['category'] = false;
