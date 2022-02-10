@@ -1,0 +1,63 @@
+.modal {
+    &-background {
+        background: rgba(11, 34, 55, 0.8);
+    }
+
+    .gallery-controls {
+        .gallery-button {
+            border-color: transparent !important;
+            background-color: transparent !important;
+
+            &:hover,
+            &:focus {
+                border-color: $white !important;
+            }
+
+            .icon {
+                fill: $white !important;
+            }
+        }
+    }
+
+    .image-caption {
+        color: $white !important;
+        font-weight: 300 !important;
+
+        strong {
+            color: $white !important;
+            font-weight: 300 !important;
+        }
+    }
+
+    .modal-close-button {
+        background-color: $white !important;
+        color: $color-blackish !important;
+
+        &:hover {
+            color: $color-blackish !important;
+
+            .icon {
+                fill: $accent-mid !important;
+            }
+        }
+
+        &:focus {
+            color: $color-blackish !important;
+
+            .icon {
+                fill: $accent-mid !important;
+            }
+        }
+
+        .icon {
+            fill: $accent-mid !important;
+        }
+    }
+}
+
+.modaal-close:focus:before,
+.modaal-close:focus:after,
+.modaal-close:hover:before,
+.modaal-close:hover:after {
+    background: $black;
+}

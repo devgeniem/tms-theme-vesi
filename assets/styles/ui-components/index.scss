@@ -1,3 +1,4 @@
+@import "archive-filters";
 @import "breadcrumbs";
 @import "button";
 @import "footer";
@@ -7,6 +8,7 @@
 @import "header/primary-nav";
 @import "header/secondary-nav";
 @import "highlight-article";
-@import "sibling-navigation";
+@import "modal";
 @import "pagination";
 @import "pill";
+@import "sibling-navigation";
