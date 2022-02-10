@@ -3,7 +3,13 @@
 .highlight-article {
     h2 {
         @include until($tablet) {
-            font-size: $size-4 !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            font-size: $size-3 !important;
+        }
+
+        @include from($desktop) {
+            margin-bottom: 1.5rem !important;
         }
 
         a {
@@ -37,6 +43,12 @@
 
         @include from($desktop) {
             padding-left: 5rem !important;
+        }
+
+        .entry__excerpt {
+            @include from($desktop) {
+                margin-top: 1.5rem !important;
+            }
         }
 
         .pill {

@@ -1,0 +1,16 @@
+.post-type-archive-blog-article {
+    p.h2 {
+        font-size: 1.52rem;
+    }
+
+    .button-toggle {
+        color: $primary !important;
+        font-weight: 500 !important;
+    }
+}
+
+.archive-blog-articles {
+    &__blog-description {
+        font-weight: 600;
+    }
+}

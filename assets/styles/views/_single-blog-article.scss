@@ -1,0 +1,56 @@
+.single-blog-article {
+    .entry {
+        &__blog-info-container {
+            background-color: $color-vesi-white;
+        }
+
+        &__share-links {
+            h2 {
+                text-align: center;
+            }
+
+        }
+    }
+
+    .section {
+        &--comments {
+            border-top: 0 !important;
+            background-color: $color-vesi-white;
+
+            .select2-container.-acf .select2-selection,
+            input,
+            textarea,
+            select {
+                border: 2px solid $primary;
+            }
+
+            label {
+                font-weight: 300 !important;
+            }
+
+            .comment {
+                &__body {
+                    border-color: $accent-mid !important;
+                }
+
+                &__date,
+                &__content {
+                    font-size: .8333333rem;
+                }
+
+                &__date {
+                    margin-top: 0 !important;
+                }
+
+                &__content {
+                    margin-bottom: 1rem !important;
+                }
+
+                &__heading {
+                    color: $color-blackish;
+
+                }
+            }
+        }
+    }
+}
