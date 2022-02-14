@@ -1,3 +1,9 @@
+.gravityform {
+    background-color: $color-vesi-white;
+    color: $color-blackish;
+    font-weight: 300;
+}
+
 .container .gform_wrapper {
     background-color: $color-vesi-white;
     color: $color-blackish;
@@ -25,8 +31,10 @@
         }
     }
 
-    input[type="submit"] {
-        padding: 0.65rem 2rem !important;
+    button.gform_button {
+        .icon {
+            margin-left: .75rem !important;
+        }
     }
 }
 
