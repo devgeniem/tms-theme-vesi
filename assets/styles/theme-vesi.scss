@@ -96,8 +96,8 @@ $pill-border-radius: 5.88rem;
 
 $table-background-color: transparent;
 $table-head-background-color: transparent;
-$table-body-background-color: transparent;
-$table-row-background-color-odd: $color-vesi-white;
+$table-body-background-color: $color-vesi-white;
+$table-row-background-color-odd: $white;
 
 @import "../../../tms-theme-base/assets/styles/main";
 @import "main";

@@ -8,6 +8,12 @@
     }
 
     tbody {
+        .even {
+            td {
+                background-color: $color-vesi-white !important;
+            }
+        }
+
         td {
             padding-right: 1.2rem;
             padding-left: 1.2rem;
