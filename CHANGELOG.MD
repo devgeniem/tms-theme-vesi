@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 0.1.0 2022-02-14
+
+### Added
+
+- TMS-614: Forms #48
+- TMS-613: Contact block styles #46
+- TMS-609: Modal styles #45
+- TMS-585: Single blog article #44
+- TMS-600: Accordion #42
+- TMS-602: Table styles #41
+- TMS-599: Material Bank #40
+- TMS-596: Logo Wall #39
+- TMS-589: Material block styles #36
+- TMS-588: Articles view #35
+- TMS-617: Text Block Layout #34
+- TMS-620: Search styles #32
+- TMS-611: Related posts styles #33
+
 ## 0.0.1 2022-01-26
 
 ### Added

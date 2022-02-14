@@ -22,6 +22,7 @@ class ThemeController extends \TMS\Theme\Base\ThemeController {
             Assets::class,
             BlocksController::class,
             FormatterController::class,
+            GravityForms::class,
             Localization::class,
             PostTypeController::class,
             TaxonomyController::class,
