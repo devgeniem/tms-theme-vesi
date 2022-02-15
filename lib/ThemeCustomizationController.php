@@ -7,6 +7,7 @@ namespace TMS\Theme\Vesi;
 
 use Geniem\ACF\Field\TrueFalse;
 use TMS\Theme\Base\Logger;
+use TMS\Theme\Base\PostType\DynamicEvent;
 use TMS\Theme\Base\PostType\Page;
 use TMS\Theme\Base\PostType\Post;
 use TMS\Theme\Vesi\ACF\Layouts\FaultMapLayout;
@@ -56,6 +57,7 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         add_filter( 'tms/theme/base/search_result_item', [ $this, 'alter_search_item' ] );
         add_filter( 'tms/theme/single_blog/classes', [ $this, 'single_blog_classes' ] );
         add_filter( 'comment_form_submit_button', [ $this, 'override_comment_form_submit' ], 20, 0 );
+        add_action( 'init', [ $this, 'remove_dynamic_event_cpt' ], 200, 0 );
     }
 
     /**
@@ -319,5 +321,12 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
                 <use xlink:href="#icon-arrow-right"></use>
             </svg>'
         );
+    }
+
+    /**
+     * Remove dynamic event CPT
+     */
+    public function remove_dynamic_event_cpt() : void {
+        unregister_post_type( DynamicEvent::SLUG );
     }
 }
