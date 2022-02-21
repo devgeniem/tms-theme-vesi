@@ -1,7 +1,4 @@
 <?php
-/**
- * Copyright (c) 2022. Geniem Oy
- */
 
 namespace TMS\Theme\Vesi\ACF\Fields;
 
@@ -9,11 +6,11 @@ use Geniem\ACF\Field;
 use TMS\Theme\Base\Logger;
 
 /**
- * Class FaultMapFields
+ * Class PriceCalculatorTampereFields
  *
  * @package TMS\Theme\Vesi\ACF\Fields
  */
-class FaultMapFields extends \Geniem\ACF\Field\Group {
+class PriceCalculatorTampereFields extends \Geniem\ACF\Field\Group {
 
     /**
      * The constructor for field.
@@ -49,10 +46,6 @@ class FaultMapFields extends \Geniem\ACF\Field\Group {
                 'label'        => 'Kuvaus',
                 'instructions' => '',
             ],
-            'button_text' => [
-                'label'        => 'Painikkeen teksti',
-                'instructions' => '',
-            ],
         ];
 
         $key = $this->get_key();
@@ -71,15 +64,9 @@ class FaultMapFields extends \Geniem\ACF\Field\Group {
             ->set_height( 100 )
             ->set_instructions( $strings['description']['instructions'] );
 
-        $button_text_field = ( new Field\Text( $strings['button_text']['label'] ) )
-            ->set_key( "${key}_button_text" )
-            ->set_name( 'button_text' )
-            ->set_instructions( $strings['button_text']['instructions'] );
-
         return [
             $title_field,
             $description_field,
-            $button_text_field,
         ];
     }
 }
