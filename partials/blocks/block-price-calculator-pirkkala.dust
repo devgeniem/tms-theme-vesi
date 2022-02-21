@@ -1,0 +1,108 @@
+<div class="price-calculator is-relative mt-6 mb-6" {?anchor} id="{anchor}"{/anchor}>
+    {?title}
+        <h2 class="price-calculator__title h3 mt-0 mb-6">
+            {title|s}
+        </h2>
+    {/title}
+
+    {?description}
+        <div class="price-calculator__description mt-6">
+            {description|s}
+        </div>
+    {/description}
+
+    <form method="GET" action="{current_url}" id="{form_id|attr}">
+        <div class="price-calculator__form-group">
+            <label for="floor-area" class="price-calculator__label">{strings.floor_area|html}</label>
+            <input type="text" name="floor_area" id="floor-area" value="{floor_area|s}">
+        </div>
+
+        <div class="price-calculator__form-group">
+            <div class="price-calculator__group-label">
+                {strings.services|html}
+            </div>
+
+            <label class="price-calculator__label--checkbox is-block">
+                <input type="checkbox" name="waste" value="1" {waste_checked|attr}>
+                {strings.sewer|html}
+            </label>
+
+            <label class="price-calculator__label--checkbox is-block">
+                <input type="checkbox" name="water" value="1" {water_checked|attr}>
+                {strings.water_pipe|html}
+            </label>
+
+            <label class="price-calculator__label--checkbox is-block">
+                <input type="checkbox" name="run_off_water" value="1" {run_off_water_checked|attr}>
+                {strings.run_off_water|html}
+            </label>
+        </div>
+
+        <div class="price-calculator__form-group">
+            <label for="usage" class="price-calculator__label">{strings.usage|html}</label>
+            <select name="usage" id="usage">
+                {#usage_options}
+                    <option value="{value|html}" {selected|attr}>{text|html}</option>
+                {/usage_options}
+            </select>
+        </div>
+
+        <div class="price-calculator__form-group">
+            <button type="submit" class="button is-primary">
+                {strings.calculate|s}
+            </button>
+        </div>
+    </form>
+
+    {?prices}
+        <table class="table is-fullwidth is-striped">
+            <thead>
+            <tr>
+                <th></th>
+                <th>{strings.price_without_vat|html}</th>
+                <th>{strings.vat|html}</th>
+                <th>{strings.price_with_vat|html}</th>
+            </tr>
+            </thead>
+            <tbody>
+                {?prices.waste}
+                <tr>
+                    <td>{strings.prices_waste|html}</td>
+                    <td>{prices.waste.price|s}</td>
+                    <td>{prices.waste.vat|s}</td>
+                    <td>{prices.waste.price_with_vat|s}</td>
+                </tr>
+                {/prices.waste}
+
+                {?prices.water}
+                <tr>
+                    <td>{strings.prices_water|html}</td>
+                    <td>{prices.water.price|s}</td>
+                    <td>{prices.water.vat|s}</td>
+                    <td>{prices.water.price_with_vat|s}</td>
+                </tr>
+                {/prices.water}
+
+                {?prices.run_off_water}
+                <tr>
+                    <td>{strings.prices_run_off_water|html}</td>
+                    <td>{prices.run_off_water.price|s}</td>
+                    <td>{prices.run_off_water.vat|s}</td>
+                    <td>{prices.run_off_water.price_with_vat|s}</td>
+                </tr>
+                {/prices.run_off_water}
+            </tbody>
+
+            {?prices.total}
+                <tfoot>
+                <tr>
+                    <th>{strings.total|html}</th>
+                    <th>{prices.total.price|s}</th>
+                    <th>{prices.total.vat|s}</th>
+                    <th>{prices.total.price_with_vat|s}</th>
+                </tr>
+                </tfoot>
+            {/prices.total}
+        </table>
+    {/prices}
+</div>
