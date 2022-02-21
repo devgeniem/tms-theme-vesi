@@ -24,6 +24,11 @@ class PriceCalculatorTampereFormatter implements \TMS\Theme\Base\Interfaces\Form
         );
     }
 
+    /**
+     * Block strings
+     *
+     * @return array
+     */
     public function strings() : array {
         return [
             'usage_option_1'    => __( 'Erillinen pientalo', 'tms-theme-vesi' ),
@@ -56,40 +61,40 @@ class PriceCalculatorTampereFormatter implements \TMS\Theme\Base\Interfaces\Form
      * @return array|\string[][]
      */
     public function usage_options() {
-        $usage   = $_GET['usage'] ?? null;
+        $usage   = isset( $_GET['usage'] ) ? sanitize_text_field( wp_unslash( $_GET['usage'] ) ) : null;
         $strings = $this->strings();
 
         $options = [
             [
-                "value" => "1,6",
-                "text"  => $strings['usage_option_1'],
+                'value' => '1,6',
+                'text'  => $strings['usage_option_1'],
             ],
             [
-                'value' => "2,4",
+                'value' => '2,4',
                 'text'  => $strings['usage_option_2'],
             ],
             [
-                'value' => "3,3",
+                'value' => '3,3',
                 'text'  => $strings['usage_option_3'],
             ],
             [
-                'value' => "4,3",
+                'value' => '4,3',
                 'text'  => $strings['usage_option_4'],
             ],
             [
-                'value' => "5,3",
+                'value' => '5,3',
                 'text'  => $strings['usage_option_5'],
             ],
             [
-                'value' => "6,1",
+                'value' => '6,1',
                 'text'  => $strings['usage_option_6'],
             ],
             [
-                'value' => "8,3",
+                'value' => '8,3',
                 'text'  => $strings['usage_option_8'],
             ],
             [
-                'value' => "9,3",
+                'value' => '9,3',
                 'text'  => $strings['usage_option_9'],
             ],
         ];
@@ -115,8 +120,12 @@ class PriceCalculatorTampereFormatter implements \TMS\Theme\Base\Interfaces\Form
         $data['current_url'] = get_the_permalink() . '#' . $data['form_id'];
         $strings             = $this->strings();
 
-        $usage              = $_GET['usage'] ?? null;
-        $floor_area         = floatval( sanitize_text_field( $_GET['floor_area'] ?? null ) );
+        $usage              = isset( $_GET['usage'] )
+            ? sanitize_text_field( wp_unslash( $_GET['usage'] ) )
+            : null;
+        $floor_area         = isset( $_GET['floor_area'] )
+            ? floatval( sanitize_text_field( wp_unslash( $_GET['floor_area'] ) ) )
+            : null;
         $floor_area_touched = $floor_area;
 
         if ( empty( $_GET['water'] ) && empty( $_GET['waste'] ) ) {

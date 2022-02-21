@@ -49,7 +49,7 @@ class FaultMapFields extends \Geniem\ACF\Field\Group {
                 'label'        => 'Kuvaus',
                 'instructions' => '',
             ],
-            'button_text'       => [
+            'button_text' => [
                 'label'        => 'Painikkeen teksti',
                 'instructions' => '',
             ],
