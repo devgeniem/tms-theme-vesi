@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- TMS-731: Add components to materials-page.
+
 ## 0.1.1 2022-02-15
 
 ### Added
