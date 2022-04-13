@@ -1,3 +1,5 @@
+// stylelint-disable declaration-no-important
+
 .site-header {
     &__nav {
         background-color: $color-accent !important;
@@ -9,9 +11,6 @@
 
     .navbar-item {
         .navbar-dropdown-control {
-            > .dropdown-toggler {
-            }
-
             .icon {
                 fill: $accent-light;
             }
@@ -20,10 +19,6 @@
         &:hover,
         &:focus {
             text-decoration: none !important;
-        }
-
-        &.current-menu-item,
-        &.current-menu-parent {
         }
     }
 
@@ -49,31 +44,20 @@
         }
     }
 
-    > .has-dropdown {
-        &.is-active,
-        &:hover,
-        &:focus {
-            > div > .navbar-link {
-            }
-        }
-    }
-
     &--dropdown {
-        .has-dropdown {
-        }
-
-        .dropdown-toggler {
-        }
-
         .navbar-dropdown {
             background-color: $color-vesi-white;
 
-            &__parent-link {
-                display: none !important;
-            }
-
             .icon {
                 fill: $accent-light;
+            }
+
+            &__parent-link {
+                color: $primary !important;
+
+                .icon {
+                    fill: $primary;
+                }
             }
         }
 
@@ -81,9 +65,9 @@
             font-family: $family-primary;
 
             .navbar-item {
+                border-color: $accent-light;
                 color: $color-blackish;
                 font-weight: 300 !important;
-                border-color: $accent-light;
 
                 &:hover,
                 &:focus {
