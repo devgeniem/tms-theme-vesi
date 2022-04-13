@@ -7,6 +7,7 @@ namespace TMS\Theme\Vesi;
 
 use Geniem\ACF\Field\TrueFalse;
 use TMS\Theme\Base\Logger;
+use TMS\Theme\Base\Settings;
 use TMS\Theme\Base\PostType\DynamicEvent;
 use TMS\Theme\Base\PostType\Page;
 use TMS\Theme\Base\PostType\Post;
@@ -53,6 +54,8 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         add_filter( 'tms/block/key_figures/fields', [ $this, 'alter_key_figures_fields' ] );
         add_filter( 'tms/block/notice_banner/fields', [ $this, 'alter_notice_banner_fields' ], 10, 2 );
         add_filter( 'tms/acf/layout/_notice_banner/fields', [ $this, 'alter_notice_banner_fields' ], 10, 2 );
+        add_filter( 'tms/acf/tab/exception_notice/fields', [ $this, 'alter_notice_banner_fields' ], 10, 2 );
+        add_filter( 'tms/theme/exception_notice/data', [ $this, 'alter_exception_notice_data' ], 10, 1 );
         add_filter( 'tms/theme/search/search_item', [ $this, 'search_classes' ] );
         add_filter( 'tms/theme/base/search_result_item', [ $this, 'alter_search_item' ] );
         add_filter( 'tms/theme/single_blog/classes', [ $this, 'single_blog_classes' ] );
@@ -265,6 +268,19 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
         }
 
         return $fields;
+    }
+
+    /**
+     * Alter exception notice data
+     *
+     * @param array $data Array of data.
+     *
+     * @return array
+     */
+    public function alter_exception_notice_data( array $data ) : array {
+        $data['is_alarm'] = Settings::get_setting( 'fg_site_settings_is_alarm' );
+
+        return $data;
     }
 
     /**
