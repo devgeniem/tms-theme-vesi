@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- TMS-782: Change the hero height from desktop breakpoint up. #63
+
 ## 0.1.2 2022-02-24
 
 - Packages updated and image-webpack-loader version like in other themes
