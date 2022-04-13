@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - TMS-783: Possibility to select alert mode for the exception notice. #64
 
+### Fixed
+
+- TMS-784: Visibility of parent links on primary navigation dropdown menus. #66
+
 ## 0.1.2 2022-02-24
 
 - Packages updated and image-webpack-loader version like in other themes
