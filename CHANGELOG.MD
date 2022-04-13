@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- TMS-784: Visibility of parent links on primary navigation dropdown menus. #66
+
 ### Added
 
 - TMS-783: Possibility to select alert mode for the exception notice. #64
