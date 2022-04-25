@@ -10,18 +10,27 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - TMS-782: Change the hero height from desktop breakpoint up. #63
+- TMS-786: Body text color to black
+
+## 0.2.0 2022-04-25
 
 ### Added
 
 - TMS-783: Possibility to select alert mode for the exception notice. #64
+- TMS-731: Add components to materials-page. #52
 
 ### Fixed
 
 - TMS-784: Visibility of parent links on primary navigation dropdown menus. #66
 
+### Changed
+
+- TMS-782: Change the hero height from desktop breakpoint up. #63
+
 ## 0.1.2 2022-02-24
 
 - Packages updated and image-webpack-loader version like in other themes
+
 ## 0.1.1 2022-02-15
 
 ### Added
