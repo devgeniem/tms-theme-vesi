@@ -16,4 +16,30 @@
             }
         }
     }
+
+    .site-header-notice {
+        background-color: $color-accent;
+
+        .button {
+            background-color: $color-accent;
+
+            &:hover,
+            &:focus {
+                background-color: $color-vesi-white;
+            }
+        }
+
+        &.has-background-highlight {
+            background-color: $color-highlight;
+
+            .button {
+                background-color: $color-highlight;
+
+                &:hover,
+                &:focus {
+                    background-color: $color-vesi-white;
+                }
+            }
+        }
+    }
 }

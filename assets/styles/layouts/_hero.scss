@@ -6,6 +6,10 @@
         background-image: none !important; // stylelint-disable declaration-no-important
     }
 
+    @include from($desktop) {
+        height: 37.7rem;
+    }
+
     &::after {
         @include from($desktop) {
             content: "";
