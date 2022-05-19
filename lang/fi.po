@@ -1,0 +1,206 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TMS Theme Vesi\n"
+"POT-Creation-Date: 2022-05-19 16:01+0300\n"
+"PO-Revision-Date: 2022-05-19 16:05+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: node_modules\n"
+
+#: comments.php:14
+msgid "Comments"
+msgstr "Kommentit"
+
+#: comments.php:23
+msgid "Reply"
+msgstr "Vastaa"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:34
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:34
+msgid "Detached house"
+msgstr "Erillinen pientalo"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:35
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:35
+msgid "Row house or linked house"
+msgstr "Rivi- tai ketjutalo"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:36
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:36
+msgid "Apartment building"
+msgstr "Asuinkerrostalo"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:37
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:37
+msgid "Office building or commercial building"
+msgstr "Toimisto- tai liikerakennus"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:38
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:38
+msgid "Industrial building or warehouse"
+msgstr "Teollisuus- tai varastorakennus"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:39
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:39
+msgid "Parking facility"
+msgstr "Pysäköintirakennus"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:40
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:40
+msgid "Unattended service station"
+msgstr "Kylmä huoltoasema"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:41
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:41
+msgid "Other building"
+msgstr "Muu rakennus"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:42
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:42
+msgid "Permitted building volume (m2)"
+msgstr "Rakennusoikeus (m2)"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:43
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:43
+msgid "Use of services"
+msgstr "Palveluiden käyttö"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:44
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:44
+msgid "Sewer"
+msgstr "Viemäri"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:45
+msgid "Stormwater"
+msgstr "Hulevesi"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:46
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:45
+msgid "Water pipeline"
+msgstr "Vesijohto"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:47
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:46
+msgid "Purpose of use"
+msgstr "Käyttötarkoitus"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:48
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:47
+msgid "Calculate"
+msgstr "Laske"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:49
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:48
+msgid "Price excluding VAT"
+msgstr "Veroton hinta"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:50
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:49
+msgid "VAT 24%"
+msgstr "alv 24%"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:51
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:50
+msgid "Price including VAT"
+msgstr "Hinta sis. alv"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:52
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:51
+msgid "Connection charge for waste water"
+msgstr "Liittymismaksu jätevesi"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:53
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:52
+msgid "Connection charge for water"
+msgstr "Liittymismaksu vesi"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:54
+msgid "Connection charge for stormwater"
+msgstr "Liittymismaksu hulevesi"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:55
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:53
+msgid "Total"
+msgstr "Yhteensä"
+
+#: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:56
+#: lib/Formatters/PriceCalculatorTampereFormatter.php:54
+msgid "Choose application"
+msgstr "Valitse käyttökohde"
+
+#: lib/ThemeCustomizationController.php:347
+msgid "Send Comment"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Field/FlexibleContent.php:67
+#: wp-content/mu-plugins/acf-codifier/src/Field/Repeater.php:60
+msgid "Add Row"
+msgstr "Lisää rivi"
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/MultisitePostObject.php:24
+msgid "Multisite Post Object"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/MultisiteRelationship.php:24
+msgid "Multisite Relationship"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/MultisiteTaxonomy.php:23
+msgid "Multisite taxonomy"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/Multitaxonomy.php:23
+msgid "Multitaxonomy"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/Multitaxonomy.php:516
+#, php-format
+msgctxt "No terms"
+msgid "No %s"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/PHP.php:18
+msgid "PHP"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/PHP.php:48
+msgid "Instructions"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/PHP.php:50
+msgid ""
+"This field can only be used with ACF Codifier. Doesn't do anything if "
+"defined in the admin side."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "TMS Theme Vesi"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Tampere Multisite Vesi Theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Geniem"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://geniem.fi"
+msgstr ""
