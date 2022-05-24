@@ -78,6 +78,18 @@ class ThemeCustomizationController implements \TMS\Theme\Base\Interfaces\Control
             ],
         ];
 
+        $blocks['acf/price-calculator-tampere'] = [
+            'post_types' => [
+                Page::SLUG,
+            ],
+        ];
+
+        $blocks['acf/price-calculator-pirkkala'] = [
+            'post_types' => [
+                Page::SLUG,
+            ],
+        ];
+
         return $blocks;
     }
 

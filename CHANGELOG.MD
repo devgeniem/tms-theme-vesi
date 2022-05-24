@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- TMS-630: Add price calculator blocks #51
+
+
 ## 0.2.1 2022-04-26
 
 ### Changed

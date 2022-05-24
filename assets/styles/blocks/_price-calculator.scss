@@ -1,0 +1,48 @@
+// stylelint-disable declaration-no-important
+
+.price-calculator {
+    &__form-group {
+        margin: .5rem 0;
+    }
+
+    &__label {
+        display: inline-block;
+        width: 33%;
+    }
+
+    form {
+        padding: 2rem;
+        background-color: $color-vesi-white;
+
+        select,
+        input[type="text"] {
+            padding: .75rem;
+        }
+    }
+
+    .table {
+        margin-top: 2.5rem;
+        border-collapse: collapse !important;
+
+        tbody {
+            background-color: transparent;
+
+            td {
+                font-size: 1rem !important;
+            }
+        }
+
+        thead,
+        tfoot {
+            th {
+                font-size: 1rem !important;
+                font-weight: 600 !important;
+            }
+        }
+    }
+
+    .button {
+        margin-top: 1rem;
+        margin-left: 33%;
+    }
+}
