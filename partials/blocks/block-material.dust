@@ -1,5 +1,5 @@
 <div class="materials is-align-full mt-6 mb-6" {?anchor} id="{anchor}"{/anchor}>
-    <div class="columns is-multiline">
+    <div class="columns is-multiline is-justify-content-center">
         {?items}
             {#items}
                 <div class="column is-12 is-6-desktop">
