@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- TMS-839: Justify block content #75
+
 ## 0.3.0 2022-05-24
 
 ### Added
