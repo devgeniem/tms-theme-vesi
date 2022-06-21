@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TMS Theme Vesi\n"
 "POT-Creation-Date: 2022-05-19 16:01+0300\n"
-"PO-Revision-Date: 2022-05-19 16:05+0300\n"
+"PO-Revision-Date: 2022-06-21 15:49+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -74,7 +74,7 @@ msgstr "Muu rakennus"
 #: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:42
 #: lib/Formatters/PriceCalculatorTampereFormatter.php:42
 msgid "Permitted building volume (m2)"
-msgstr "Rakennusoikeus (m2)"
+msgstr "Rakennusoikeus (m<sup>2</sup>)"
 
 #: lib/Formatters/PriceCalculatorPirkkalaFormatter.php:43
 #: lib/Formatters/PriceCalculatorTampereFormatter.php:43

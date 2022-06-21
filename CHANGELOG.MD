@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- TMS-630: Fix translation #78
+
 ## 0.3.1 2022-06-21
 
 ### Added
