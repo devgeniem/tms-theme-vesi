@@ -7,9 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 0.3.1 2022-06-21
+
 ### Added
 
 - TMS-839: Justify block content #75
+
+### Fixed
+
+- TMS-880: Display drupal image #76
 
 ## 0.3.0 2022-05-24
 
