@@ -1,4 +1,9 @@
 .tablepress {
+    & * {
+        /* stylelint-disable-next-line declaration-no-important */
+        word-break: normal !important;
+    }
+
     thead {
         th {
             padding-right: 1.2rem;
@@ -8,6 +13,9 @@
     }
 
     tbody {
+        td {
+            min-width: 1px;
+        }
         .even {
             td {
                 background-color: $color-vesi-white !important;
