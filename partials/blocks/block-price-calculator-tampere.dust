@@ -13,7 +13,7 @@
 
     <form method="GET" action="{current_url}" id="{form_id|attr}">
         <div class="price-calculator__form-group">
-            <label for="floor-area" class="price-calculator__label">{strings.floor_area|html}</label>
+            <label for="floor-area" class="price-calculator__label">{strings.floor_area|kses}</label>
             <input type="text" name="floor_area" id="floor-area" value="{floor_area|s}">
         </div>
 
