@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - TMS-892: Reduce table td min-width #83
+
+## 0.3.2 2022-08-23
+
+### Fixed
+- TMS-894: Fix composer
 - TMS-630: Fix translation #78
 
 ## 0.3.1 2022-06-21
