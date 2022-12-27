@@ -1,6 +1,6 @@
-<form role="search" method="get" class="search-form is-flex is-flex-direction-row is-align-items-center has-width-100"
+<form role="search" method="get" class="search-form is-flex is-flex-direction-row is-align-items-center mt-5 has-width-100"
       action="{Header.search_action|s}">
-    <div class="mr-2 mt-5 is-flex-grow-1">
+    <div class="mr-2 is-flex-grow-1">
         <label>
             <span class="is-sr-only"> {Strings.s.header.search_input_label|s} </span>
             <input type="search"
