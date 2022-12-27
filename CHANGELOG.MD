@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 0.3.4 2022-12-27
+
 ### Fixed
 - PIEN-8034: Remove single search-button and add a working search-form to hamburger-menu
 
