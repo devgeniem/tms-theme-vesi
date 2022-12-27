@@ -26,11 +26,7 @@
                 {>"ui/menu/language-nav" links=Header.language_nav.links /}
 
                 {^Header.hide_search}
-                    <a href="{Header.search_action|s}?s="
-                       class="{Header.colors.search_button|s} button is-primary button--icon">
-                        {Strings.s.header.search|s}
-                        {>"ui/icon" icon="search" class="icon--large is-primary-invert"  /}
-                    </a>
+                    {>"ui/search-form-small" button_class=Header.colors.search_button /}
                 {/Header.hide_search}
             </div>
 
