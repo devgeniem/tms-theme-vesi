@@ -145,7 +145,7 @@ class PriceCalculatorTampereFormatter implements \TMS\Theme\Base\Interfaces\Form
                 $floor_area_touched = 500;
             }
 
-            $total          = $floor_area_touched * 1.54 * $usage_factor;
+            $total          = $floor_area_touched * 1.78 * $usage_factor;
             $data['prices'] = [];
             $data           = $this->calculate_prices( $data, $total );
         }
