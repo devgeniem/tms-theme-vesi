@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- PIEN-8157: PHP 8.1
+
+## 0.3.5 2023-01-19
+
+### Fixed
+- PIEN-8111: Update price calculator values
+
+## 0.3.4 2022-12-27
+
 ### Fixed
 - PIEN-8034: Remove single search-button and add a working search-form to hamburger-menu
 
