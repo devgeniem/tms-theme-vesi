@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- TMS-970: Add image caption text to call-to-action and content-columns blocks.
+
+## 0.4.1 2023-05-03
+
+### Fixed
+
+- PIEN-8606: Display API images #105
+
+## 0.4.0 2023-04-11
+
 - PIEN-8157: PHP 8.1
 
 ## 0.3.5 2023-01-19
