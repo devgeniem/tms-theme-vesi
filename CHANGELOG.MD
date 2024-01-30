@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - TMS-970: Add image caption text to call-to-action and content-columns blocks.
 - TMS-1003: Update price calculator values
+- TMS-1005: Fix Pirkkala calculator total price
 
 ## 0.4.1 2023-05-03
 
