@@ -209,9 +209,9 @@ class PriceCalculatorPirkkalaFormatter implements \TMS\Theme\Base\Interfaces\For
 
         if ( count( $data['prices'] ) > 1 ) {
             $data['prices']['total'] = [
-                'price'          => $data['prices']['waste']['price'] * 2,
-                'vat'            => $data['prices']['waste']['vat'] * 2,
-                'price_with_vat' => $data['prices']['waste']['price_with_vat'] * 2,
+                'price'          => ( $data['prices']['water']['price'] ?? 0 ) + ( $data['prices']['waste']['price'] ?? 0 ) + ( $data['prices']['run_off_water']['price'] ?? 0 ),
+                'vat'            => ( $data['prices']['water']['vat'] ?? 0 ) + ( $data['prices']['waste']['vat'] ?? 0 ) + ( $data['prices']['run_off_water']['vat'] ?? 0 ),
+                'price_with_vat' => ( $data['prices']['water']['price_with_vat'] ?? 0 ) + ( $data['prices']['waste']['price_with_vat'] ?? 0 ) + ( $data['prices']['run_off_water']['price_with_vat'] ?? 0 ),
             ];
         }
 
