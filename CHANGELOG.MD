@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## 0.4.2 2024-02-01
 
 - TMS-1003: Update price calculator values
+- TMS-1005: Fix Pirkkala calculator total price
 
 ## 0.4.1 2023-05-03
 
