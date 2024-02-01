@@ -169,9 +169,9 @@ class PriceCalculatorPirkkalaFormatter implements \TMS\Theme\Base\Interfaces\For
     public function calculate_prices( $data, $floor_area_touched, $usage_factor ) : array {
         $data['prices'] = [];
         $factor_map     = [
-            'water'         => 1.672,
-            'waste'         => 2.09,
-            'run_off_water' => 0.418,
+            'water'         => 1.712,
+            'waste'         => 2.14,
+            'run_off_water' => 0.428,
         ];
 
         if ( isset( $_GET['water'] ) && intval( $_GET['water'] ) === 1 ) {
