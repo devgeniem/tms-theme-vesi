@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 0.4.3 2024-07-31
+
+### Added
 - CSD-1234: Liittymismaksulaskurit uudella alv:lla. #108
 
 ## 0.4.2 2024-02-01
